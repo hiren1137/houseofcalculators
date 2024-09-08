@@ -24,7 +24,7 @@ export default function TI84Calculator() {
 
   const calculateResult = () => {
     try {
-      let result = evaluateExpression(expression);
+      const result = evaluateExpression(expression);
       setDisplay(result.toString());
       setExpression(result.toString());
     } catch (error) {
@@ -90,7 +90,7 @@ export default function TI84Calculator() {
       <section className="mt-12 bg-gray-700 bg-opacity-50 p-6 rounded-xl shadow-lg">
         <h2 className="text-3xl font-semibold mb-4 text-blue-300">About the TI-84 Calculator</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          The TI-84 Plus is a graphing calculator made by Texas Instruments. It's widely used in mathematics and science education, from middle school through college. This online version provides basic functionality similar to a physical TI-84 calculator.
+          The TI-84 Plus is a graphing calculator made by Texas Instruments. It&apos;s widely used in mathematics and science education, from middle school through college. This online version provides basic functionality similar to a physical TI-84 calculator.
         </p>
         <h3 className="text-2xl font-semibold mb-2 text-blue-300">Key Features:</h3>
         <ul className="list-disc list-inside text-gray-300 space-y-1 mb-4">
@@ -101,7 +101,7 @@ export default function TI84Calculator() {
           <li>Basic graphing capabilities (not fully implemented in this version)</li>
         </ul>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          While this online version captures the essence of a TI-84 calculator, it's important to note that it doesn't include all the advanced features of the physical device, such as programming capabilities, statistical analysis tools, or full graphing functionality.
+          While this online version captures the essence of a TI-84 calculator, it&apos;s important to note that it doesn&apos;t include all the advanced features of the physical device, such as programming capabilities, statistical analysis tools, or full graphing functionality.
         </p>
       </section>
 

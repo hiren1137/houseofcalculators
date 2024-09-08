@@ -116,13 +116,13 @@ export default function TaylorSeriesCalculator() {
       <section className="mt-12">
         <h2 className="text-3xl font-semibold mb-4 text-green-200">Understanding Taylor Series</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          A Taylor series is a representation of a function as an infinite sum of terms calculated from the values of its derivatives at a single point. It's a powerful tool in mathematical analysis, allowing us to approximate complex functions with polynomials.
+          A Taylor series is a representation of a function as an infinite sum of terms calculated from the values of its derivatives at a single point. It&apos;s a powerful tool in mathematical analysis, allowing us to approximate complex functions with polynomials.
         </p>
         <h3 className="text-2xl font-semibold mb-2 text-green-200">Taylor Series Formula:</h3>
         <div className="bg-white bg-opacity-10 p-4 rounded-lg mb-4">
-          <p className="text-lg text-gray-200 mb-2">f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)²/2! + f'''(a)(x-a)³/3! + ...</p>
+          <p className="text-lg text-gray-200 mb-2">f(x) = f(a) + f&apos;(a)(x-a) + f&apos;&apos;(a)(x-a)²/2! + f&apos;&apos;&apos;(a)(x-a)³/3! + ...</p>
           <p className="text-lg text-gray-200">= Σ (f⁽ⁿ⁾(a) * (x-a)ⁿ / n!) from n=0 to ∞</p>
-          <p className="text-sm text-gray-300 mt-2">Where 'a' is the center point and f⁽ⁿ⁾(a) is the nth derivative of f at point a.</p>
+          <p className="text-sm text-gray-300 mt-2">Where &apos;a&apos; is the center point and f⁽ⁿ⁾(a) is the nth derivative of f at point a.</p>
         </div>
         <h3 className="text-2xl font-semibold mb-2 text-green-200">Key Concepts:</h3>
         <ul className="list-disc list-inside text-gray-300 space-y-2 mb-4">

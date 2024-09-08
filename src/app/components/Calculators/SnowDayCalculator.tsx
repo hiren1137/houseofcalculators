@@ -84,7 +84,7 @@ export default function SnowDayCalculator() {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-blue-200">Will Your School Have a Snow Day?</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          Welcome to our magical Snow Day Calculator! ✨ Wondering if your school might close due to snow? Our enchanted tool uses real-time weather data to predict the likelihood of a snow day and potential school closure in your area.
+        Welcome to our magical Snow Day Calculator! ✨ Wondering if your school might close due to snow? Our enchanted tool uses real-time weather data to predict the likelihood of a snow day and potential school closure in your area.
         </p>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
           Simply enter your US ZIP code below, and we'll analyze the latest weather conditions to calculate your chances of a snowy school day off!
