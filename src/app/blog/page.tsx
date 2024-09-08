@@ -17,7 +17,7 @@ export default function Blog() {
           <h1 className="text-4xl font-bold mb-8 text-center">Our Blog</h1>
           <div className="text-center">
             <p className="text-2xl mb-4">Coming Soon!</p>
-            <p className="text-xl mb-4">We're working on bringing you interesting articles and insights.</p>
+            <p className="text-xl mb-4">We&apos;re working on bringing you interesting articles and insights.</p>
             <p className="text-lg">Check back soon for updates!</p>
           </div>
         </main>
