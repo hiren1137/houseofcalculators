@@ -13,15 +13,10 @@ const TI84Calculator = dynamic(() => import('../components/Calculators/TI84Calcu
 const RREFCalculator = dynamic(() => import('../components/Calculators/RREFCalculator'), { ssr: false });
 const TaylorSeriesCalculator = dynamic(() => import('../components/Calculators/TaylorSeriesCalculator'), { ssr: false });
 
-// Placeholder component remains the same
-const PlaceholderCalculator = ({ name }: { name: string }) => (
-  <div className="max-w-4xl mx-auto mt-10 p-6 bg-gray-800 rounded-lg shadow-xl">
-    <h1 className="text-3xl font-bold text-white mb-4">{name}</h1>
-    <p className="text-gray-300">This calculator is coming soon. Check back later!</p>
-  </div>
-);
+// Define a type for the calculator components
+type CalculatorComponent = React.ComponentType<unknown>;
 
-const calculators: { [key: string]: React.ComponentType<any> } = {
+const calculators: { [key: string]: CalculatorComponent } = {
   'snow-day-calculator': SnowDayCalculator,
   'midpoint-calculator': MidpointCalculator,
   'a1c-calculator': A1CCalculator,
