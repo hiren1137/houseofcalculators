@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import Head from 'next/head';
 import Header from './components/Header';
+import { allCategories } from './data/categories';
 
 type Calculator = {
   id: number;
@@ -15,14 +16,6 @@ type Calculator = {
   link: string;
   category: string;
 };
-
-export const allCategories = [
-  'Everyday Use',
-  'Engineering',
-  'Mathematics',
-  'Health',
-  'Science'
-];
 
 const calculators: Calculator[] = [
   { id: 1, title: 'Snow Day Calculator', description: 'Predict snow day likelihood', icon: '❄️', color: 'from-blue-500 to-blue-600', link: '/snow-day-calculator', category: 'Everyday Use' },
@@ -69,7 +62,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
-        <Header allCategories={allCategories} />
+        <Header />
         <main className="flex-grow">
           <div className="relative overflow-hidden mb-16">
             <div className="absolute inset-0 z-0">

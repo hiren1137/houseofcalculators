@@ -3,12 +3,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { allCategories } from '../data/categories';
 
-interface HeaderProps {
-  allCategories?: string[];
-}
-
-export default function Header({ allCategories = [] }: HeaderProps) {
+export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -29,25 +26,23 @@ export default function Header({ allCategories = [] }: HeaderProps) {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li><Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
-            {allCategories.length > 0 && (
-              <li className="relative group">
-                <button className="text-gray-300 hover:text-white transition-colors focus:outline-none">
-                  Categories ▼
-                </button>
-                <ul className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out z-50">
-                  {allCategories.map((category, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={`/?category=${encodeURIComponent(category)}`}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
-                      >
-                        {category}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            )}
+            <li className="relative group">
+              <button className="text-gray-300 hover:text-white transition-colors focus:outline-none">
+                Categories ▼
+              </button>
+              <ul className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out z-50">
+                {allCategories.map((category, index) => (
+                  <li key={index}>
+                    <Link 
+                      href={`/?category=${encodeURIComponent(category)}`}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white"
+                    >
+                      {category}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
             <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
             <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
           </ul>
@@ -63,25 +58,23 @@ export default function Header({ allCategories = [] }: HeaderProps) {
         <div className="md:hidden">
           <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <li><Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900">Home</Link></li>
-            {allCategories.length > 0 && (
-              <li>
-                <button className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
-                  Categories ▼
-                </button>
-                <ul className="pl-4">
-                  {allCategories.map((category, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={`/?category=${encodeURIComponent(category)}`}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
-                      >
-                        {category}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            )}
+            <li>
+              <button className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+                Categories ▼
+              </button>
+              <ul className="pl-4">
+                {allCategories.map((category, index) => (
+                  <li key={index}>
+                    <Link 
+                      href={`/?category=${encodeURIComponent(category)}`}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                    >
+                      {category}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
             <li><Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</Link></li>
             <li><Link href="/blog" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Blog</Link></li>
           </ul>
