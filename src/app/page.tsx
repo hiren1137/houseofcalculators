@@ -16,8 +16,16 @@ export type Calculator = {
   category: string;
 };
 
+export const allCategories = [
+  'Everyday Use',
+  'Engineering',
+  'Mathematics',
+  'Health',
+  'Science'
+];
+
 export const calculators: Calculator[] = [
-  { id: 1, title: 'Snow Day Calculator', description: 'Predict snow day likelihood', icon: '❄️', color: 'from-blue-500 to-blue-600', link: '/snow-day-calculator', category: 'Science' },
+  { id: 1, title: 'Snow Day Calculator', description: 'Predict snow day likelihood', icon: '❄️', color: 'from-blue-500 to-blue-600', link: '/snow-day-calculator', category: 'Everyday Use' },
   { id: 2, title: 'Bottleneck Calculator', description: 'Find performance bottlenecks', icon: '💻', color: 'from-red-500 to-red-600', link: '/bottleneck-calculator', category: 'Engineering' },
   { id: 3, title: 'RREF Calculator', description: 'Reduced Row Echelon Form', icon: '🎓', color: 'from-green-500 to-green-600', link: '/rref-calculator', category: 'Mathematics' },
   { id: 4, title: 'Cross Product Calculator', description: 'Calculate vector cross product', icon: '📐', color: 'from-yellow-500 to-yellow-600', link: '/cross-product-calculator', category: 'Mathematics' },

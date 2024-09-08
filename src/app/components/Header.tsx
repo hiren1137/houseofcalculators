@@ -3,16 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { calculators, Calculator } from '../page';
-
-const getUniqueCategories = (calculators: Calculator[]): string[] => {
-  const categories = calculators.map(calc => calc.category);
-  return Array.from(new Set(categories)).sort();
-};
+import { allCategories } from '../page';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const categories = getUniqueCategories(calculators);
 
   return (
     <header className="bg-gray-800 backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-50">
@@ -37,7 +31,7 @@ export default function Header() {
                 Categories ▼
               </button>
               <ul className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out z-50">
-                {categories.map((category, index) => (
+                {allCategories.map((category, index) => (
                   <li key={index}>
                     <Link 
                       href={`/?category=${encodeURIComponent(category)}`}
@@ -69,7 +63,7 @@ export default function Header() {
                 Categories ▼
               </button>
               <ul className="pl-4">
-                {categories.map((category, index) => (
+                {allCategories.map((category, index) => (
                   <li key={index}>
                     <Link 
                       href={`/?category=${encodeURIComponent(category)}`}
