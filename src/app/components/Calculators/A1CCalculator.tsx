@@ -89,7 +89,7 @@ export default function A1CCalculator() {
             <li>5.7% to 6.4%: Prediabetes range</li>
             <li>6.5% or above: Diabetes range</li>
           </ul>
-          <p className="mt-4 text-lg">Remember, these are general guidelines. Your target A1C may vary based on individual factors and your healthcare provider's recommendations.</p>
+          <p className="mt-4 text-lg">Remember, these are general guidelines. Your target A1C may vary based on individual factors and your healthcare provider&apos;s recommendations.</p>
         </div>
         <div className="bg-gray-800 p-6 rounded-lg">
           <h3 className="text-2xl font-semibold mb-2 text-indigo-400">Tips for Improving Your Numbers</h3>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Chart, ChartConfiguration, ScatterController, LineController, PointElement, LineElement, LinearScale } from 'chart.js';
 
 Chart.register(ScatterController, LineController, PointElement, LineElement, LinearScale);
@@ -23,10 +23,9 @@ export default function MidpointCalculator() {
       y: (point1.y + point2.y) / 2
     };
     setMidpoint(mid);
-    updateChart();
   };
 
-  const updateChart = () => {
+  const updateChart = useCallback(() => {
     if (chartRef.current) {
       const ctx = chartRef.current.getContext('2d');
       if (ctx) {
@@ -111,14 +110,14 @@ export default function MidpointCalculator() {
         chartInstance.current = new Chart(ctx, config);
       }
     }
-  };
+  }, [point1, point2, midpoint]);
 
   useEffect(() => {
     updateChart();
-  }, []);
+  }, [updateChart]);
 
   const handleInputChange = (point: 'point1' | 'point2', coord: 'x' | 'y', value: string) => {
-    const numValue = value === '' ? '' : Number(value);
+    const numValue = value === '' ? 0 : Number(value);
     if (point === 'point1') {
       setPoint1(prev => ({ ...prev, [coord]: numValue }));
     } else {
@@ -133,7 +132,7 @@ export default function MidpointCalculator() {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-200">Find the Middle Ground</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          Welcome to our Midpoint Calculator! This tool helps you find the exact center point between any two coordinates on a 2D plane. Whether you're working on geometry homework or planning the perfect meeting spot between two locations, our calculator has got you covered.
+          Welcome to our Midpoint Calculator! This tool helps you find the exact center point between any two coordinates on a 2D plane. Whether you&apos;re working on geometry homework or planning the perfect meeting spot between two locations, our calculator has got you covered.
         </p>
       </section>
 
@@ -200,7 +199,7 @@ export default function MidpointCalculator() {
       <section className="mt-12">
         <h2 className="text-3xl font-semibold mb-4 text-purple-200">The Magic of Midpoints</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          In mathematics, the midpoint is the point that divides a line segment into two equal parts. It's a fundamental concept in geometry with numerous practical applications.
+          In mathematics, the midpoint is the point that divides a line segment into two equal parts. It&apos;s a fundamental concept in geometry with numerous practical applications.
         </p>
         <h3 className="text-2xl font-semibold mb-2 text-purple-200">The Midpoint Formula</h3>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">

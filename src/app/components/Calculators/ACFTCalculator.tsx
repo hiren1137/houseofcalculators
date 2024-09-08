@@ -206,7 +206,7 @@ export default function ACFTCalculator() {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-green-300">Measure Your Military Fitness</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          Enter your scores for each ACFT event to calculate your total score and determine if you've passed the test.
+          Enter your scores for each ACFT event to calculate your total score and determine if you&apos;ve passed the test.
         </p>
       </section>
 
@@ -352,7 +352,7 @@ export default function ACFTCalculator() {
       <section className="mt-12 bg-blue-800 bg-opacity-50 p-6 rounded-xl shadow-lg">
         <h2 className="text-3xl font-semibold mb-4 text-green-300">About the ACFT</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          The Army Combat Fitness Test (ACFT) consists of six events designed to measure soldiers' physical fitness and readiness for combat tasks. A minimum score of 60 points is required for each event, with a total minimum score of 360 points to pass the test.
+          The Army Combat Fitness Test (ACFT) consists of six events designed to measure soldiers&apos; physical fitness and readiness for combat tasks. A minimum score of 60 points is required for each event, with a total minimum score of 360 points to pass the test.
         </p>
       </section>
 
