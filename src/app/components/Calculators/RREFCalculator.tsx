@@ -70,7 +70,7 @@ export default function RREFCalculator() {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-blue-200">Transform Your Matrices</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          Welcome to our RREF Calculator! This powerful tool helps you convert any matrix into its Reduced Row Echelon Form. Whether you're solving systems of linear equations, finding matrix ranks, or studying linear algebra, our RREF Calculator simplifies your work and enhances your understanding.
+          Welcome to our RREF Calculator! This powerful tool helps you convert any matrix into its Reduced Row Echelon Form. Whether you&apos;re solving systems of linear equations, finding matrix ranks, or studying linear algebra, our RREF Calculator simplifies your work and enhances your understanding.
         </p>
       </section>
 
@@ -160,7 +160,7 @@ export default function RREFCalculator() {
       <section className="mt-12">
         <h2 className="text-3xl font-semibold mb-4 text-blue-200">Understanding RREF</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          The Reduced Row Echelon Form (RREF) is a standardized form of a matrix that provides crucial insights into the properties and solutions of linear systems. It's an essential concept in linear algebra with wide-ranging applications in mathematics, physics, and engineering.
+          The Reduced Row Echelon Form (RREF) is a standardized form of a matrix that provides crucial insights into the properties and solutions of linear systems. It&apos;s an essential concept in linear algebra with wide-ranging applications in mathematics, physics, and engineering.
         </p>
         <h3 className="text-2xl font-semibold mb-2 text-blue-200">Key Properties of RREF:</h3>
         <ul className="list-disc list-inside text-gray-300 space-y-2 mb-4">
