@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import Head from 'next/head';
 import Header from './components/Header';
 
-export type Calculator = {
+type Calculator = {
   id: number;
   title: string;
   description: string;
@@ -24,7 +24,7 @@ export const allCategories = [
   'Science'
 ];
 
-export const calculators: Calculator[] = [
+const calculators: Calculator[] = [
   { id: 1, title: 'Snow Day Calculator', description: 'Predict snow day likelihood', icon: '❄️', color: 'from-blue-500 to-blue-600', link: '/snow-day-calculator', category: 'Everyday Use' },
   { id: 2, title: 'Bottleneck Calculator', description: 'Find performance bottlenecks', icon: '💻', color: 'from-red-500 to-red-600', link: '/bottleneck-calculator', category: 'Engineering' },
   { id: 3, title: 'RREF Calculator', description: 'Reduced Row Echelon Form', icon: '🎓', color: 'from-green-500 to-green-600', link: '/rref-calculator', category: 'Mathematics' },
@@ -69,7 +69,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
-        <Header />
+        <Header allCategories={allCategories} />
         <main className="flex-grow">
           <div className="relative overflow-hidden mb-16">
             <div className="absolute inset-0 z-0">
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
               <h2 className="text-5xl font-extrabold mb-4 text-white">Calculate Anything</h2>
               <p className="text-xl text-gray-300 mb-8">Explore our vast collection of online calculators</p>
-              <div className="relative max-w-md mx-auto">
+              <div className="relative max-w-md mx-auto mb-4">
                 <input
                   type="text"
                   placeholder="Search calculators..."
