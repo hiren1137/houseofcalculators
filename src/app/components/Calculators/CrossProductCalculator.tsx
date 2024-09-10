@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 
 interface Vector {
-  x: number | '';
-  y: number | '';
-  z: number | '';
+  x: number;
+  y: number;
+  z: number;
 }
 
 export default function CrossProductCalculator() {
@@ -14,19 +14,16 @@ export default function CrossProductCalculator() {
   const [result, setResult] = useState<Vector | null>(null);
 
   const calculateCrossProduct = () => {
-    const v1 = { x: Number(vector1.x) || 0, y: Number(vector1.y) || 0, z: Number(vector1.z) || 0 };
-    const v2 = { x: Number(vector2.x) || 0, y: Number(vector2.y) || 0, z: Number(vector2.z) || 0 };
-    
     const cross = {
-      x: v1.y * v2.z - v1.z * v2.y,
-      y: v1.z * v2.x - v1.x * v2.z,
-      z: v1.x * v2.y - v1.y * v2.x
+      x: vector1.y * vector2.z - vector1.z * vector2.y,
+      y: vector1.z * vector2.x - vector1.x * vector2.z,
+      z: vector1.x * vector2.y - vector1.y * vector2.x
     };
     setResult(cross);
   };
 
-  const handleInputChange = (vector: 'vector1' | 'vector2', coord: 'x' | 'y' | 'z', value: string) => {
-    const numValue = value === '' ? '' : Number(value);
+  const handleInputChange = (vector: 'vector1' | 'vector2', coord: keyof Vector, value: string) => {
+    const numValue = value === '' ? 0 : Number(value);
     if (vector === 'vector1') {
       setVector1(prev => ({ ...prev, [coord]: numValue }));
     } else {
@@ -46,18 +43,18 @@ export default function CrossProductCalculator() {
       </section>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        {['vector1', 'vector2'].map((vector, index) => (
+        {(['vector1', 'vector2'] as const).map((vector, index) => (
           <div key={vector} className="bg-blue-800 bg-opacity-50 p-6 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-4 text-teal-300">Vector {index + 1}</h3>
             <div className="space-y-4">
-              {['x', 'y', 'z'].map((coord) => (
+              {(['x', 'y', 'z'] as const).map((coord) => (
                 <div key={coord} className="flex items-center">
                   <label className="w-8 text-teal-200 font-bold">{coord.toUpperCase()}:</label>
                   <input
                     type="number"
                     placeholder={`Enter ${coord} value`}
-                    value={vector === 'vector1' ? vector1[coord as keyof Vector] : vector2[coord as keyof Vector]}
-                    onChange={(e) => handleInputChange(vector as 'vector1' | 'vector2', coord as 'x' | 'y' | 'z', e.target.value)}
+                    value={vector === 'vector1' ? vector1[coord] : vector2[coord]}
+                    onChange={(e) => handleInputChange(vector, coord, e.target.value)}
                     className="w-full p-2 bg-blue-700 bg-opacity-50 rounded-lg text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
                   />
                 </div>

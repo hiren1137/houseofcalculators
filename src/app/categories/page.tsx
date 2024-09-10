@@ -29,16 +29,18 @@ const calculators: Calculator[] = [
 
 export default function CategoryPage() {
   const params = useParams();
-  const category = params.category as string;
+  const category = (params?.category as string) || '';
 
-  const categoryCalculators = calculators.filter(calc => calc.category.toLowerCase() === category.toLowerCase());
+  const categoryCalculators = calculators.filter(calc => 
+    calc.category.toLowerCase() === (category?.toLowerCase() ?? '')
+  );
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
       <Header />
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-4xl font-bold mb-8 text-center">{category} Calculators</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center">{category || 'All'} Calculators</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {categoryCalculators.map(calc => (
               <div key={calc.id} className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
