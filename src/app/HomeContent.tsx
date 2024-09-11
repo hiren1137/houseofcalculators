@@ -27,6 +27,7 @@ const calculators: Calculator[] = [
   { id: 8, title: 'Midpoint Calculator', description: 'Find the midpoint between points', icon: '📏', color: 'from-orange-500 to-orange-600', link: '/midpoint-calculator', category: 'Mathematics' },
   { id: 9, title: 'Taylor Series Calculator', description: 'Calculate Taylor Series', icon: '📈', color: 'from-cyan-500 to-cyan-600', link: '/taylor-series-calculator', category: 'Mathematics' },
   { id: 10, title: 'Board Foot Calculator', description: 'Calculate lumber volume and cost', icon: '🪵', color: 'from-green-500 to-green-600', link: '/board-foot-calculator', category: 'Everyday Use' },
+  { id: 11, title: 'Vorici Chromatic Calculator', description: 'Optimize Path of Exile socket coloring', icon: '🔮', color: 'from-purple-500 to-purple-600', link: '/vorici-chromatic-calculator', category: 'Gaming' },
 ];
 
 export default function HomeContent() {

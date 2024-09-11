@@ -23,6 +23,7 @@ const TI84Calculator = dynamic(() => import('../components/Calculators/TI84Calcu
 const RREFCalculator = dynamic(() => import('../components/Calculators/RREFCalculator'), { ssr: false }) as CalculatorComponent;
 const TaylorSeriesCalculator = dynamic(() => import('../components/Calculators/TaylorSeriesCalculator'), { ssr: false }) as CalculatorComponent;
 const BoardFootCalculator = dynamic(() => import('../components/Calculators/BoardFootCalculator'), { ssr: false }) as CalculatorComponent;
+const VoriciChromaticCalculator = dynamic(() => import('../components/Calculators/VoriciChromaticCalculator'), { ssr: false }) as CalculatorComponent;
 
 const calculators: Record<string, CalculatorComponent> = {
   'snow-day-calculator': SnowDayCalculator,
@@ -35,6 +36,7 @@ const calculators: Record<string, CalculatorComponent> = {
   'ti-84-calculator': TI84Calculator,
   'taylor-series-calculator': TaylorSeriesCalculator,
   'board-foot-calculator': BoardFootCalculator,
+  'vorici-chromatic-calculator': VoriciChromaticCalculator,
 };
 
 interface CalculatorPageProps {
