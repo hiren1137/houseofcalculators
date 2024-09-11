@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.houseofcalculators.com
+
+# Sitemaps
+Sitemap: https://www.houseofcalculators.com/sitemap.xml
