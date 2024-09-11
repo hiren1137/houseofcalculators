@@ -26,6 +26,7 @@ const calculators: Calculator[] = [
   { id: 7, title: 'A1C Calculator', description: 'Estimate A1C levels', icon: '🩸', color: 'from-teal-500 to-teal-600', link: '/a1c-calculator', category: 'Health' },
   { id: 8, title: 'Midpoint Calculator', description: 'Find the midpoint between points', icon: '📏', color: 'from-orange-500 to-orange-600', link: '/midpoint-calculator', category: 'Mathematics' },
   { id: 9, title: 'Taylor Series Calculator', description: 'Calculate Taylor Series', icon: '📈', color: 'from-cyan-500 to-cyan-600', link: '/taylor-series-calculator', category: 'Mathematics' },
+  { id: 10, title: 'Board Foot Calculator', description: 'Calculate lumber volume and cost', icon: '🪵', color: 'from-green-500 to-green-600', link: '/board-foot-calculator', category: 'Everyday Use' },
 ];
 
 export default function HomeContent() {
