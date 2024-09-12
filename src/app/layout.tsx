@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: "House of Calculators",
   description: "Your go-to resource for various calculators and mathematical tools.",
   icons: [
-    { rel: "icon", url: "/calculator-logo.png", type: "image/png" },
-    { rel: "apple-touch-icon", url: "/calculator-logo.png" }
+    { rel: "icon", url: "/favicon.png?v=2", type: "image/png" },
+    { rel: "apple-touch-icon", url: "/favicon.png?v=2" }
   ],
 };
 
