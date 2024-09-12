@@ -2,59 +2,48 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Header from '../components/Header';
+import { Metadata } from 'next'
+import { calculatorMetadata } from '../calculatorMetadata'
 
-// Define a more specific type for the calculator components
-type CalculatorProps = {
-  // Add any common props your calculators might use
-  // For example:
-  // initialValue?: number;
-};
-
-type CalculatorComponent = React.ComponentType<CalculatorProps>;
-
-// Dynamic imports for all calculators
-const SnowDayCalculator = dynamic(() => import('../components/Calculators/SnowDayCalculator'), { ssr: false }) as CalculatorComponent;
-const MidpointCalculator = dynamic(() => import('../components/Calculators/MidpointCalculator'), { ssr: false }) as CalculatorComponent;
-const A1CCalculator = dynamic(() => import('../components/Calculators/A1CCalculator'), { ssr: false }) as CalculatorComponent;
-const BottleneckCalculator = dynamic(() => import('../components/Calculators/BottleneckCalculator'), { ssr: false }) as CalculatorComponent;
-const CrossProductCalculator = dynamic(() => import('../components/Calculators/CrossProductCalculator'), { ssr: false }) as CalculatorComponent;
-const ACFTCalculator = dynamic(() => import('../components/Calculators/ACFTCalculator'), { ssr: false }) as CalculatorComponent;
-const TI84Calculator = dynamic(() => import('../components/Calculators/TI84Calculator'), { ssr: false }) as CalculatorComponent;
-const RREFCalculator = dynamic(() => import('../components/Calculators/RREFCalculator'), { ssr: false }) as CalculatorComponent;
-const TaylorSeriesCalculator = dynamic(() => import('../components/Calculators/TaylorSeriesCalculator'), { ssr: false }) as CalculatorComponent;
-const BoardFootCalculator = dynamic(() => import('../components/Calculators/BoardFootCalculator'), { ssr: false }) as CalculatorComponent;
-const VoriciChromaticCalculator = dynamic(() => import('../components/Calculators/VoriciChromaticCalculator'), { ssr: false }) as CalculatorComponent;
-
-const calculators: Record<string, CalculatorComponent> = {
-  'snow-day-calculator': SnowDayCalculator,
-  'midpoint-calculator': MidpointCalculator,
-  'a1c-calculator': A1CCalculator,
-  'bottleneck-calculator': BottleneckCalculator,
-  'cross-product-calculator': CrossProductCalculator,
-  'rref-calculator': RREFCalculator,
-  'acft-calculator': ACFTCalculator,
-  'ti-84-calculator': TI84Calculator,
-  'taylor-series-calculator': TaylorSeriesCalculator,
-  'board-foot-calculator': BoardFootCalculator,
-  'vorici-chromatic-calculator': VoriciChromaticCalculator,
-};
-
-interface CalculatorPageProps {
-  params: { calculator: string };
+type Props = {
+  params: { calculator: string }
 }
 
-export default function CalculatorPage({ params }: CalculatorPageProps): JSX.Element {
-  const CalculatorComponent = calculators[params.calculator];
-
-  if (!CalculatorComponent) {
-    notFound();
+export function generateMetadata({ params }: Props): Metadata {
+  const metadata = calculatorMetadata[params.calculator]
+  if (!metadata) {
+    return {
+      title: 'Calculator Not Found',
+      description: 'The requested calculator does not exist.',
+    }
   }
+  return metadata
+}
+
+const calculators: { [key: string]: () => Promise<{ default: React.ComponentType }> } = {
+  'snow-day-calculator': () => import('../components/Calculators/SnowDayCalculator'),
+  'bottleneck-calculator': () => import('../components/Calculators/BottleneckCalculator'),
+  'rref-calculator': () => import('../components/Calculators/RREFCalculator'),
+  'cross-product-calculator': () => import('../components/Calculators/CrossProductCalculator'),
+  'acft-calculator': () => import('../components/Calculators/ACFTCalculator'),
+  'ti-84-calculator': () => import('../components/Calculators/TI84Calculator'),
+  'a1c-calculator': () => import('../components/Calculators/A1CCalculator'),
+  'midpoint-calculator': () => import('../components/Calculators/MidpointCalculator'),
+  'taylor-series-calculator': () => import('../components/Calculators/TaylorSeriesCalculator'),
+  'vorici-chromatic-calculator': () => import('../components/Calculators/VoriciChromaticCalculator'),
+  'board-foot-calculator': () => import('../components/Calculators/BoardFootCalculator'),
+};
+
+export default function CalculatorPage({ params }: Props): JSX.Element {
+  const CalculatorComponent = dynamic(calculators[params.calculator] || (() => Promise.resolve(() => notFound())));
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
       <Header />
       <main className="flex-grow">
-        <CalculatorComponent />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <CalculatorComponent />
+        </div>
       </main>
     </div>
   );

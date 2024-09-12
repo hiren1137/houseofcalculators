@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Header from '../../components/Header'; 
+
 
 class Colored {
   constructor(public red: number, public green: number, public blue: number) {}
@@ -235,10 +235,9 @@ const VoriciChromaticCalculator = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
-      <Header />
-      <main className="flex-grow pt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold mb-4 flex items-center">
+    <main className="flex-grow">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold mb-4 flex items-center">
             <span className="mr-4">🔮</span>
             Vorici Chromatic Calculator
             <span className="ml-4">🎨</span>
@@ -399,16 +398,16 @@ const VoriciChromaticCalculator = () => {
               <li>For off-color sockets, Vorici crafting might be more cost-effective</li>
               <li>Remember that Chromatic Orbs can't produce white sockets</li>
             </ul>
-          </div>
-        </div>
-      </main>
-      <footer className="bg-gray-800 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-400">
-          <p>&copy; 2024 House of Calculators. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
-  );
+            </div>
+            </div>
+    </main>
+    <footer className="bg-gray-800 mt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-400">
+        <p>&copy; 2024 House of Calculators. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+);
 };
 
 export default VoriciChromaticCalculator;
