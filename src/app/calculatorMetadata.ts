@@ -48,5 +48,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   'board-foot-calculator': {
     title: 'Board Foot Calculator | House of Calculators',
     description: 'Calculate lumber volume and cost with our free Board Foot Calculator. Easily determine board feet for any wood project or purchase.',
+  },
+  'army-body-fat-calculator': {
+    title: 'Army Body Fat Calculator - Official U.S. Military Standards | House of Calculators',
+    description: 'Use our accurate Army Body Fat Calculator to measure your body composition against official U.S. military standards. Get instant results, personalized tips, and prepare for ACFT. Ideal for soldiers and recruits.',
   }
 }

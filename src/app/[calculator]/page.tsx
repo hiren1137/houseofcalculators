@@ -32,6 +32,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'taylor-series-calculator': () => import('../components/Calculators/TaylorSeriesCalculator'),
   'vorici-chromatic-calculator': () => import('../components/Calculators/VoriciChromaticCalculator'),
   'board-foot-calculator': () => import('../components/Calculators/BoardFootCalculator'),
+  'army-body-fat-calculator': () => import('../components/Calculators/ArmyBodyFatCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
