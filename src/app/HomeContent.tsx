@@ -29,6 +29,7 @@ const calculators: Calculator[] = [
   { id: 10, title: 'Board Foot Calculator', description: 'Calculate lumber volume and cost', icon: '🪵', color: 'from-green-500 to-green-600', link: '/board-foot-calculator', category: 'Everyday Use' },
   { id: 11, title: 'Vorici Chromatic Calculator', description: 'Optimize Path of Exile socket coloring', icon: '🔮', color: 'from-purple-500 to-purple-600', link: '/vorici-chromatic-calculator', category: 'Gaming' },
   { id: 12, title: 'Army Body Fat Calculator', description: 'Measure body composition for U.S. military standards', icon: '📏', color: 'from-red-500 to-red-600', link: '/army-body-fat-calculator', category: 'Health' },
+  { id: 13, title: 'Dot Product Calculator', description: 'Calculate the dot product of vectors', icon: '🔢', color: 'from-blue-500 to-blue-600', link: '/dot-product-calculator', category: 'Mathematics' },
 ];
 
 export default function HomeContent() {
