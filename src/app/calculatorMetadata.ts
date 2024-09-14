@@ -56,5 +56,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   'dot-product-calculator': {
     title: 'Dot Product Calculator - Vector Mathematics - House of Calculators',
     description: 'Calculate dot products of vectors easily with our free Dot Product Calculator. Ideal for physics, engineering, and mathematics. Includes visual representation and step-by-step explanation.',
+  },
+  'mean-absolute-deviation-calculator': {
+    title: 'Mean Absolute Deviation Calculator - Measure Data Dispersion - House of Calculators',
+    description: 'Calculate and visualize Mean Absolute Deviation (MAD) with our free online tool. Perfect for statistics, data analysis, and understanding data spread. Includes graphical representation.',
+    keywords: 'mean absolute deviation, MAD calculator, data dispersion, statistics calculator, data analysis tool',
   }
 }

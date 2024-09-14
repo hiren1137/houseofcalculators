@@ -30,6 +30,7 @@ const calculators: Calculator[] = [
   { id: 11, title: 'Vorici Chromatic Calculator', description: 'Optimize Path of Exile socket coloring', icon: '🔮', color: 'from-purple-500 to-purple-600', link: '/vorici-chromatic-calculator', category: 'Gaming' },
   { id: 12, title: 'Army Body Fat Calculator', description: 'Measure body composition for U.S. military standards', icon: '📏', color: 'from-red-500 to-red-600', link: '/army-body-fat-calculator', category: 'Health' },
   { id: 13, title: 'Dot Product Calculator', description: 'Calculate the dot product of vectors', icon: '🔢', color: 'from-blue-500 to-blue-600', link: '/dot-product-calculator', category: 'Mathematics' },
+  { id: 14, title: 'Mean Absolute Deviation Calculator', description: 'Calculate the mean absolute deviation of a dataset', icon: '📊', color: 'from-pink-500 to-pink-600', link: '/mean-absolute-deviation-calculator', category: 'Mathematics' },
 ];
 
 export default function HomeContent() {
