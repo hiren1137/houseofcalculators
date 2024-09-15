@@ -61,5 +61,11 @@ export const calculatorMetadata: CalculatorMetadata = {
     title: 'Mean Absolute Deviation Calculator - Measure Data Dispersion - House of Calculators',
     description: 'Calculate and visualize Mean Absolute Deviation (MAD) with our free online tool. Perfect for statistics, data analysis, and understanding data spread. Includes graphical representation.',
     keywords: 'mean absolute deviation, MAD calculator, data dispersion, statistics calculator, data analysis tool',
+  },
+  'bra-size-calculator': {
+    title: 'Bra Size Calculator - Find Your Perfect Fit - House of Calculators',
+    description: 'Use our accurate Bra Size Calculator for US, UK, Australian, and Indian sizes. Get your perfect fit with easy measurements and expert tips. Free, instant results!',
+    keywords: 'bra size calculator, bra fitting, US bra sizes, UK bra sizes, Australian bra sizes, Indian bra sizes, perfect fit',
   }
+  
 }

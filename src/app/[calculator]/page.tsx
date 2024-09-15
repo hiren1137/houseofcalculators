@@ -35,6 +35,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'army-body-fat-calculator': () => import('../components/Calculators/ArmyBodyFatCalculator'),
   'dot-product-calculator': () => import('../components/Calculators/DotProductCalculator'),
   'mean-absolute-deviation-calculator': () => import('../components/Calculators/MeanAbsoluteDeviationCalculator'),
+  'bra-size-calculator': () => import('../components/Calculators/BraSizeCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
