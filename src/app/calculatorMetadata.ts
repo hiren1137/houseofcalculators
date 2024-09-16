@@ -70,7 +70,11 @@ export const calculatorMetadata: CalculatorMetadata = {
   'simpsons-rule-calculator': {
     title: 'Simpsons Rule Calculator - House of Calculators',
     description: "Use our Simpson's Rule Calculator to approximate definite integrals with ease. Accurate numerical integration for your mathematical needs.",
-    keywords: "Simpson's Rule Calculator, simpson rule calculator, simpson's approximation calculator, simpsons rule calc"
+    keywords: "Simpson's Rule Calculator, simpson rule calculator, simpson's approximation calculator, simpsons rule calc",
+  },
+  'quadratic-equation-solver': {
+    title: 'Quadratic Equation Solver - House of Calculators',
+    description: 'Solve quadratic equations easily with our Quadratic Equation Solver. Find roots and visualize graphs quickly.',
   }
   
 }

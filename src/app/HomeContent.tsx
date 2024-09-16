@@ -33,6 +33,7 @@ const calculators: Calculator[] = [
   { id: 14, title: 'Mean Absolute Deviation Calculator', description: 'Calculate the mean absolute deviation of a dataset', icon: '📊', color: 'from-pink-500 to-pink-600', link: '/mean-absolute-deviation-calculator', category: 'Mathematics' },
   { id: 15, title: 'Bra Size Calculator', description: 'Estimate your bra size based on measurements', icon: '👙', color: 'from-purple-500 to-purple-600', link: '/bra-size-calculator', category: 'Everyday Use' },
   { id: 16, title: 'Simpsons Rule Calculator', description: 'Calculate definite integrals using Simpson\'s Rule', icon: '📐', color: 'from-blue-500 to-blue-600', link: '/simpsons-rule-calculator', category: 'Mathematics' },
+  { id: 17, title: 'Quadratic Equation Solver', description: 'Solve quadratic equations using the quadratic formula', icon: '🧮', color: 'from-green-500 to-green-600', link: '/quadratic-equation-solver', category: 'Mathematics' },
 ];
 
 export default function HomeContent() {

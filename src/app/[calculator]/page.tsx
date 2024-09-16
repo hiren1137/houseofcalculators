@@ -37,6 +37,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'mean-absolute-deviation-calculator': () => import('../components/Calculators/MeanAbsoluteDeviationCalculator'),
   'bra-size-calculator': () => import('../components/Calculators/BraSizeCalculator'),
   'simpsons-rule-calculator': () => import('../components/Calculators/SimpsonsRuleCalculator'),
+  'quadratic-equation-solver': () => import('../components/Calculators/QuadraticEquationSolver'),
   
 };
 
