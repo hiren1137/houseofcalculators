@@ -43,6 +43,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'motorcycle-loan-calculator': () => import('../components/Calculators/MotorcycleLoanCalculator'),
   'bmi-calculator': () => import('../components/Calculators/BMICalculator'),
   'angel-number-calculator': () => import('../components/Calculators/AngelNumberCalculator'),
+  'tangent-line-calculator': () => import('../components/Calculators/TangentLineCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

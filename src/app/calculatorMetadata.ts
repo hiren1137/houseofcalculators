@@ -96,4 +96,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Angel Number Calculator - Discover Your Spiritual Message - House of Calculators',
   description: 'Unveil your angel number with our free Angel Number Calculator. Enter your birth date or any significant number to find its spiritual meaning and guidance.',
 },
+'tangent-line-calculator': { 
+  title: 'Tangent Line Calculator - Find the Equation of a Tangent Line - House of Calculators', 
+  description: 'Calculate the equation of a tangent line to a function at a given point with our free Tangent Line Calculator. Visualize the function and its tangent line on a graph.' 
+},
 }
