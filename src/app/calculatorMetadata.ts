@@ -66,6 +66,11 @@ export const calculatorMetadata: CalculatorMetadata = {
     title: 'Bra Size Calculator - Find Your Perfect Fit - House of Calculators',
     description: 'Use our accurate Bra Size Calculator for US, UK, Australian, and Indian sizes. Get your perfect fit with easy measurements and expert tips. Free, instant results!',
     keywords: 'bra size calculator, bra fitting, US bra sizes, UK bra sizes, Australian bra sizes, Indian bra sizes, perfect fit',
+  },
+  'simpsons-rule-calculator': {
+    title: 'Simpsons Rule Calculator - House of Calculators',
+    description: "Use our Simpson's Rule Calculator to approximate definite integrals with ease. Accurate numerical integration for your mathematical needs.",
+    keywords: "Simpson's Rule Calculator, simpson rule calculator, simpson's approximation calculator, simpsons rule calc"
   }
   
 }

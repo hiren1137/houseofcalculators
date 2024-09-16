@@ -36,6 +36,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'dot-product-calculator': () => import('../components/Calculators/DotProductCalculator'),
   'mean-absolute-deviation-calculator': () => import('../components/Calculators/MeanAbsoluteDeviationCalculator'),
   'bra-size-calculator': () => import('../components/Calculators/BraSizeCalculator'),
+  'simpsons-rule-calculator': () => import('../components/Calculators/SimpsonsRuleCalculator'),
+  
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
