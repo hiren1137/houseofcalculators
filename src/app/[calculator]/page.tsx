@@ -39,6 +39,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'simpsons-rule-calculator': () => import('../components/Calculators/SimpsonsRuleCalculator'),
   'quadratic-equation-solver': () => import('../components/Calculators/QuadraticEquationSolver'),
   'cpm-calculator': () => import('../components/Calculators/CPMCalculator'),
+  'point-buy-calculator': () => import('../components/Calculators/PointBuyCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

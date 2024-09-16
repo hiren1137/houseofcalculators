@@ -35,6 +35,7 @@ const calculators: Calculator[] = [
   { id: 16, title: 'Simpsons Rule Calculator', description: 'Calculate definite integrals using Simpson\'s Rule', icon: '📐', color: 'from-blue-500 to-blue-600', link: '/simpsons-rule-calculator', category: 'Mathematics' },
   { id: 17, title: 'Quadratic Equation Solver', description: 'Solve quadratic equations using the quadratic formula', icon: '🧮', color: 'from-green-500 to-green-600', link: '/quadratic-equation-solver', category: 'Mathematics' },
   { id: 18, title: 'CPM Calculator', description: 'Calculate cost per mille for advertising', icon: '💰', color: 'from-yellow-500 to-yellow-600', link: '/cpm-calculator', category: 'Finance' }, 
+  { id: 19, title: 'Point Buy Calculator', description: 'Customize your character\'s attributes', icon: '🎲', color: 'from-green-500 to-green-600', link: '/point-buy-calculator', category: 'Gaming' },
 ];
 
 export default function HomeContent() {

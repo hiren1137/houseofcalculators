@@ -80,5 +80,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'CPM Calculator - Cost Per Mile Calculation - House of Calculators',
   description: 'Easily calculate your Cost Per Mille (CPM) with our professional CPM Calculator. Optimize your advertising spend and maximize campaign efficiency today.',
 },
-  
+  'point-buy-calculator': {
+  title: 'Point Buy Calculator - House of Calculators',
+  description: "Customize your character's attributes with our Point Buy Calculator. Allocate points strategically to create the perfect character for your adventure.",
+},
 }
