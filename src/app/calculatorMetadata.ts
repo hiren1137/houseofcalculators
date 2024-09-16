@@ -75,6 +75,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   'quadratic-equation-solver': {
     title: 'Quadratic Equation Solver - House of Calculators',
     description: 'Solve quadratic equations easily with our Quadratic Equation Solver. Find roots and visualize graphs quickly.',
-  }
+  },
+  'cpm-calculator': {
+  title: 'CPM Calculator - Cost Per Mile Calculation - House of Calculators',
+  description: 'Easily calculate your Cost Per Mille (CPM) with our professional CPM Calculator. Optimize your advertising spend and maximize campaign efficiency today.',
+},
   
 }

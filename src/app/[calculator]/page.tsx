@@ -38,7 +38,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'bra-size-calculator': () => import('../components/Calculators/BraSizeCalculator'),
   'simpsons-rule-calculator': () => import('../components/Calculators/SimpsonsRuleCalculator'),
   'quadratic-equation-solver': () => import('../components/Calculators/QuadraticEquationSolver'),
-  
+  'cpm-calculator': () => import('../components/Calculators/CPMCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

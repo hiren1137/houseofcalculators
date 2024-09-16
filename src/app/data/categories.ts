@@ -4,5 +4,8 @@ export const allCategories = [
   'Mathematics',
   'Health',
   'Science',
-  'Gaming'
+  'Gaming',
+  'Finance',
+  'Technology',
+  'Lifestyle & Spirituality'
 ];
