@@ -84,4 +84,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Point Buy Calculator - House of Calculators',
   description: "Customize your character's attributes with our Point Buy Calculator. Allocate points strategically to create the perfect character for your adventure.",
 },
+'motorcycle-loan-calculator': {
+  title: 'Motorcycle Loan Calculator - Estimate Your Monthly Payments - House of Calculators',
+  description: 'Use our free Motorcycle Loan Calculator to estimate your monthly payments and total interest. Plan your purchase and understand your financing options today.',
+},
 }

@@ -36,6 +36,7 @@ const calculators: Calculator[] = [
   { id: 17, title: 'Quadratic Equation Solver', description: 'Solve quadratic equations using the quadratic formula', icon: '🧮', color: 'from-green-500 to-green-600', link: '/quadratic-equation-solver', category: 'Mathematics' },
   { id: 18, title: 'CPM Calculator', description: 'Calculate cost per mille for advertising', icon: '💰', color: 'from-yellow-500 to-yellow-600', link: '/cpm-calculator', category: 'Finance' }, 
   { id: 19, title: 'Point Buy Calculator', description: 'Customize your character\'s attributes', icon: '🎲', color: 'from-green-500 to-green-600', link: '/point-buy-calculator', category: 'Gaming' },
+  { id: 20, title: 'Motorcycle Loan Calculator', description: 'Estimate your motorcycle loan payments', icon: '🏍️', color: 'from-blue-500 to-blue-600', link: '/motorcycle-loan-calculator', category: 'Finance' },
 ];
 
 export default function HomeContent() {

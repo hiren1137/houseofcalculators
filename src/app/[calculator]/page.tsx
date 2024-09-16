@@ -40,6 +40,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'quadratic-equation-solver': () => import('../components/Calculators/QuadraticEquationSolver'),
   'cpm-calculator': () => import('../components/Calculators/CPMCalculator'),
   'point-buy-calculator': () => import('../components/Calculators/PointBuyCalculator'),
+  'motorcycle-loan-calculator': () => import('../components/Calculators/MotorcycleLoanCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
