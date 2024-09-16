@@ -100,4 +100,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Tangent Line Calculator - Find the Equation of a Tangent Line - House of Calculators', 
   description: 'Calculate the equation of a tangent line to a function at a given point with our free Tangent Line Calculator. Visualize the function and its tangent line on a graph.' 
 },
+'maryland-paycheck-calculator': { 
+  title: 'Maryland Paycheck Calculator - Estimate Your Net Pay - House of Calculators', 
+  description: 'Use our Maryland Paycheck Calculator to estimate your net paycheck after federal and state taxes, Social Security, and Medicare deductions. Plan your finances effectively.' 
+},
 }

@@ -44,6 +44,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'bmi-calculator': () => import('../components/Calculators/BMICalculator'),
   'angel-number-calculator': () => import('../components/Calculators/AngelNumberCalculator'),
   'tangent-line-calculator': () => import('../components/Calculators/TangentLineCalculator'),
+  'maryland-paycheck-calculator': () => import('../components/Calculators/MarylandPaycheckCalculator'),
+
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
