@@ -92,4 +92,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'BMI Calculator - Calculate Your Body Mass Index - House of Calculators',
   description: 'Calculate your Body Mass Index (BMI) with our free BMI Calculator. Understand your weight category and take steps towards a healthier lifestyle today.',
 },
+'angel-number-calculator': {
+  title: 'Angel Number Calculator - Discover Your Spiritual Message - House of Calculators',
+  description: 'Unveil your angel number with our free Angel Number Calculator. Enter your birth date or any significant number to find its spiritual meaning and guidance.',
+},
 }

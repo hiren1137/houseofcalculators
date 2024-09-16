@@ -38,6 +38,8 @@ const calculators: Calculator[] = [
   { id: 19, title: 'Point Buy Calculator', description: 'Customize your character\'s attributes', icon: '🎲', color: 'from-green-500 to-green-600', link: '/point-buy-calculator', category: 'Gaming' },
   { id: 20, title: 'Motorcycle Loan Calculator', description: 'Estimate your motorcycle loan payments', icon: '🏍️', color: 'from-blue-500 to-blue-600', link: '/motorcycle-loan-calculator', category: 'Finance' },
   { id: 21, title: 'BMI Calculator', description: 'Calculate your Body Mass Index', icon: '🧘‍♂️', color: 'from-purple-500 to-purple-600', link: '/bmi-calculator', category: 'Health' },
+  { id: 22, title: 'Angel Number Calculator', description: 'Discover your spiritual message', icon: '✨', color: 'from-purple-500 to-indigo-600', link: '/angel-number-calculator', category: 'Lifestyle & Spirituality' },
+
 ];
 
 export default function HomeContent() {
