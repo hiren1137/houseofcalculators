@@ -88,4 +88,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Motorcycle Loan Calculator - Estimate Your Monthly Payments - House of Calculators',
   description: 'Use our free Motorcycle Loan Calculator to estimate your monthly payments and total interest. Plan your purchase and understand your financing options today.',
 },
+'bmi-calculator': {
+  title: 'BMI Calculator - Calculate Your Body Mass Index - House of Calculators',
+  description: 'Calculate your Body Mass Index (BMI) with our free BMI Calculator. Understand your weight category and take steps towards a healthier lifestyle today.',
+},
 }
