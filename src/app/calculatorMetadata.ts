@@ -112,4 +112,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Riemann Sum Calculator - Approximate Integrals Using Riemann Sums - House of Calculators',
   description: 'Approximate the area under a curve using Riemann sums with our free Riemann Sum Calculator. Choose from Left, Right, Midpoint, or Trapezoidal methods.',
 },
+'partial-fraction-decomposition-calculator': {
+  title: 'Partial Fraction Decomposition Calculator - Decompose Rational Functions - House of Calculators',
+  description:'Perform partial fraction decomposition on rational functions with our free Partial Fraction Decomposition Calculator. Input your function and get the decomposed form instantly.',
+},
 }

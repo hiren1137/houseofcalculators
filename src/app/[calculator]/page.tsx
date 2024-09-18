@@ -47,6 +47,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'maryland-paycheck-calculator': () => import('../components/Calculators/MarylandPaycheckCalculator'),
   'interpolation-calculator': () => import('../components/Calculators/InterpolationCalculator'),
   'riemann-sum-calculator': () => import('../components/Calculators/RiemannSumCalculator'),
+  'partial-fraction-decomposition-calculator': () => import('../components/Calculators/PartialFractionDecompositionCalculator'),
+
 
 
 };
