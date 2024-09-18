@@ -41,7 +41,7 @@ const calculators: Calculator[] = [
   { id: 22, title: 'Angel Number Calculator', description: 'Discover your spiritual message', icon: '✨', color: 'from-purple-500 to-indigo-600', link: '/angel-number-calculator', category: 'Lifestyle & Spirituality' },
   { id: 23, title: 'Tangent Line Calculator', description: 'Find the equation of a tangent line', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/tangent-line-calculator', category: 'Mathematics' },
   { id: 24, title: 'Maryland Paycheck Calculator', description: 'Estimate your net pay after taxes and deductions', icon: '💰', color: 'from-green-500 to-green-600', link: '/maryland-paycheck-calculator', category: 'Finance' },
-
+  { id: 25, title: 'Interpolation Calculator', description: 'Estimate values using interpolation', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/interpolation-calculator', category: 'Mathematics' },
 
 ];
 

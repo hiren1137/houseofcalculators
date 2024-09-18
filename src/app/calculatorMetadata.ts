@@ -104,4 +104,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Maryland Paycheck Calculator - Estimate Your Net Pay - House of Calculators', 
   description: 'Use our Maryland Paycheck Calculator to estimate your net paycheck after federal and state taxes, Social Security, and Medicare deductions. Plan your finances effectively.' 
 },
+'interpolation-calculator': {
+  title: 'Interpolation Calculator - Estimate a Value Using Linear Interpolation - House of Calculators',
+  description: 'Estimate a value using linear interpolation with our free Interpolation Calculator. Input known points and calculate the interpolated value instantly.',
+},
 }

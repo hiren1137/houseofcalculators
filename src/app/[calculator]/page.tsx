@@ -45,6 +45,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'angel-number-calculator': () => import('../components/Calculators/AngelNumberCalculator'),
   'tangent-line-calculator': () => import('../components/Calculators/TangentLineCalculator'),
   'maryland-paycheck-calculator': () => import('../components/Calculators/MarylandPaycheckCalculator'),
+  'interpolation-calculator': () => import('../components/Calculators/InterpolationCalculator'),
 
 };
 
