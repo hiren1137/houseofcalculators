@@ -108,4 +108,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Interpolation Calculator - Estimate a Value Using Linear Interpolation - House of Calculators',
   description: 'Estimate a value using linear interpolation with our free Interpolation Calculator. Input known points and calculate the interpolated value instantly.',
 },
+'riemann-sum-calculator': {
+  title: 'Riemann Sum Calculator - Approximate Integrals Using Riemann Sums - House of Calculators',
+  description: 'Approximate the area under a curve using Riemann sums with our free Riemann Sum Calculator. Choose from Left, Right, Midpoint, or Trapezoidal methods.',
+},
 }

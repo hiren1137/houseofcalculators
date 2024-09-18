@@ -42,6 +42,8 @@ const calculators: Calculator[] = [
   { id: 23, title: 'Tangent Line Calculator', description: 'Find the equation of a tangent line', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/tangent-line-calculator', category: 'Mathematics' },
   { id: 24, title: 'Maryland Paycheck Calculator', description: 'Estimate your net pay after taxes and deductions', icon: '💰', color: 'from-green-500 to-green-600', link: '/maryland-paycheck-calculator', category: 'Finance' },
   { id: 25, title: 'Interpolation Calculator', description: 'Estimate values using interpolation', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/interpolation-calculator', category: 'Mathematics' },
+  { id: 26, title: 'Riemann Sum Calculator', description: 'Approximate integrals using Riemann sums', icon: '∫', color: 'from-indigo-500 to-blue-600', link: '/riemann-sum-calculator', category: 'Mathematics' },
+
 
 ];
 

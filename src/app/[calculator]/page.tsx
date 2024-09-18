@@ -46,6 +46,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'tangent-line-calculator': () => import('../components/Calculators/TangentLineCalculator'),
   'maryland-paycheck-calculator': () => import('../components/Calculators/MarylandPaycheckCalculator'),
   'interpolation-calculator': () => import('../components/Calculators/InterpolationCalculator'),
+  'riemann-sum-calculator': () => import('../components/Calculators/RiemannSumCalculator'),
+
 
 };
 
