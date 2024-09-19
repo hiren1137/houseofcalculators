@@ -44,8 +44,7 @@ const calculators: Calculator[] = [
   { id: 25, title: 'Interpolation Calculator', description: 'Estimate values using interpolation', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/interpolation-calculator', category: 'Mathematics' },
   { id: 26, title: 'Riemann Sum Calculator', description: 'Approximate integrals using Riemann sums', icon: '∫', color: 'from-indigo-500 to-blue-600', link: '/riemann-sum-calculator', category: 'Mathematics' },
   { id: 27, title: 'Partial Fraction Decomposition Calculator', description: 'Decompose rational functions into partial fractions', icon: '➗', color: 'from-indigo-500 to-blue-600', link: '/partial-fraction-decomposition-calculator', category: 'Mathematics' },
-
-
+  { id: 28, title: 'WASPI Compensation Calculator', description: 'Estimate your WASPI compensation', icon: '💼', color: 'from-green-500 to-green-600', link: '/waspi-compensation-calculator', category: 'Finance' },
 
 ];
 

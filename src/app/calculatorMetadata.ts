@@ -116,4 +116,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Partial Fraction Decomposition Calculator - Decompose Rational Functions - House of Calculators',
   description:'Perform partial fraction decomposition on rational functions with our free Partial Fraction Decomposition Calculator. Input your function and get the decomposed form instantly.',
 },
+
+'waspi-compensation-calculator': {
+  title: 'WASPI Compensation Calculator - Estimate Your Pension Compensation - House of Calculators',
+  description: 'Use our free WASPI Compensation Calculator to estimate potential compensation for women affected by state pension age changes. Input your birth date and get an instant estimate.',
+  keywords: 'WASPI, Women Against State Pension Inequality, pension compensation, UK state pension, retirement calculator',
+},
 }
