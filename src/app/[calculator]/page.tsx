@@ -49,6 +49,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'riemann-sum-calculator': () => import('../components/Calculators/RiemannSumCalculator'),
   'partial-fraction-decomposition-calculator': () => import('../components/Calculators/PartialFractionDecompositionCalculator'),
   'waspi-compensation-calculator': () => import('../components/Calculators/WASPICompensationCalculator'),
+  'roblox-tax-calculator': () => import('../components/Calculators/RobloxTaxCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

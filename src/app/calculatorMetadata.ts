@@ -122,4 +122,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Use our free WASPI Compensation Calculator to estimate potential compensation for women affected by state pension age changes. Input your birth date and get an instant estimate.',
   keywords: 'WASPI, Women Against State Pension Inequality, pension compensation, UK state pension, retirement calculator',
 },
+'roblox-tax-calculator': {
+  title: 'Roblox Tax Calculator - House of Calculators',
+  description: 'Calculate Roblox marketplace fees and estimate your earnings with our Roblox Tax Calculator. Perfect for Roblox developers and users.',
+},
 }
