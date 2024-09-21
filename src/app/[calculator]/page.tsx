@@ -51,6 +51,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'waspi-compensation-calculator': () => import('../components/Calculators/WASPICompensationCalculator'),
   'roblox-tax-calculator': () => import('../components/Calculators/RobloxTaxCalculator'),
   'null-space-calculator': () => import('../components/Calculators/NullSpaceCalculator'),
+  'iowa-paycheck-calculator': () => import('../components/Calculators/IowaPaycheckCalculator'),
+
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

@@ -130,4 +130,10 @@ export const calculatorMetadata: CalculatorMetadata = {
     title: 'Null Space Calculator - House of Calculators',
     description: 'Efficiently calculate the null space (kernel) of matrices with our accurate null space calculator. Solve linear algebra problems with ease.',
   },
+  'iowa-paycheck-calculator': {
+  title: 'Iowa Paycheck Calculator - House of Calculators',
+  description: 'Calculate your net pay after federal and Iowa state taxes, Social Security, and Medicare deductions using our Iowa Paycheck Calculator. Perfect for Iowa residents.',
+  keywords: 'Iowa paycheck calculator, net pay estimator, Iowa taxes, federal taxes, Social Security, Medicare, finance calculator',
+},
+
 }
