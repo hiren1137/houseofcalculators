@@ -140,4 +140,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Compute the Jacobian matrix of a set of functions using our accurate Jacobian Calculator. Perfect for students and professionals.', 
   keywords: 'Jacobian calculator, Jacobian matrix, partial derivatives, multivariable calculus, mathematics calculator', 
 },
+'electron-configuration-calculator': { 
+  title: 'Electron Configuration Calculator - House of Calculators', 
+  description: 'Determine the electron configuration of elements using our easy-to-use Electron Configuration Calculator. Ideal for students and chemistry enthusiasts.', 
+  keywords: 'electron configuration calculator, chemistry calculator, electron shells, periodic table, element electron configuration',
+},
 }
