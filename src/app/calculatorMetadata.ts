@@ -135,5 +135,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Calculate your net pay after federal and Iowa state taxes, Social Security, and Medicare deductions using our Iowa Paycheck Calculator. Perfect for Iowa residents.',
   keywords: 'Iowa paycheck calculator, net pay estimator, Iowa taxes, federal taxes, Social Security, Medicare, finance calculator',
 },
-
+'jacobian-calculator': { 
+  title: 'Jacobian Calculator - House of Calculators', 
+  description: 'Compute the Jacobian matrix of a set of functions using our accurate Jacobian Calculator. Perfect for students and professionals.', 
+  keywords: 'Jacobian calculator, Jacobian matrix, partial derivatives, multivariable calculus, mathematics calculator', 
+},
 }

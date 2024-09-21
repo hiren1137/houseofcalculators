@@ -52,6 +52,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'roblox-tax-calculator': () => import('../components/Calculators/RobloxTaxCalculator'),
   'null-space-calculator': () => import('../components/Calculators/NullSpaceCalculator'),
   'iowa-paycheck-calculator': () => import('../components/Calculators/IowaPaycheckCalculator'),
+  'jacobian-calculator': () => import('../components/Calculators/JacobianCalculator'),
 
 };
 

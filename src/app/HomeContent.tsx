@@ -48,6 +48,7 @@ const calculators: Calculator[] = [
   { id: 29, title: 'Roblox Tax Calculator', description: 'Calculate Roblox marketplace fees', icon: '🎮', color: 'from-red-500 to-red-600', link: '/roblox-tax-calculator', category: 'Gaming' },
   { id: 30, title: 'Null Space Calculator', description: 'Compute the null space (kernel) of a matrix', icon: '🧮', color: 'from-purple-500 to-pink-600', link: '/null-space-calculator', category: 'Mathematics' },
   { id: 31, title: 'Iowa Paycheck Calculator', description: 'Estimate your net pay after taxes and deductions in Iowa', icon: '💸', color: 'from-blue-500 to-blue-600', link: '/iowa-paycheck-calculator', category: 'Finance' },
+  { id: 32, title: 'Jacobian Calculator', description: 'Compute the Jacobian matrix of a set of functions', icon: '🔢', color: 'from-yellow-500 to-yellow-600', link: '/jacobian-calculator', category: 'Mathematics' },
 
 ];
 
