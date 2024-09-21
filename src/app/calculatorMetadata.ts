@@ -126,4 +126,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Roblox Tax Calculator - House of Calculators',
   description: 'Calculate Roblox marketplace fees and estimate your earnings with our Roblox Tax Calculator. Perfect for Roblox developers and users.',
 },
+'null-space-calculator': {
+    title: 'Null Space Calculator - House of Calculators',
+    description: 'Efficiently calculate the null space (kernel) of matrices with our accurate null space calculator. Solve linear algebra problems with ease.',
+  },
 }

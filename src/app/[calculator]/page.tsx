@@ -50,6 +50,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'partial-fraction-decomposition-calculator': () => import('../components/Calculators/PartialFractionDecompositionCalculator'),
   'waspi-compensation-calculator': () => import('../components/Calculators/WASPICompensationCalculator'),
   'roblox-tax-calculator': () => import('../components/Calculators/RobloxTaxCalculator'),
+  'null-space-calculator': () => import('../components/Calculators/NullSpaceCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

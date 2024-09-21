@@ -46,6 +46,7 @@ const calculators: Calculator[] = [
   { id: 27, title: 'Partial Fraction Decomposition Calculator', description: 'Decompose rational functions into partial fractions', icon: '➗', color: 'from-indigo-500 to-blue-600', link: '/partial-fraction-decomposition-calculator', category: 'Mathematics' },
   { id: 28, title: 'WASPI Compensation Calculator', description: 'Estimate your WASPI compensation', icon: '💼', color: 'from-green-500 to-green-600', link: '/waspi-compensation-calculator', category: 'Finance' },
   { id: 29, title: 'Roblox Tax Calculator', description: 'Calculate Roblox marketplace fees', icon: '🎮', color: 'from-red-500 to-red-600', link: '/roblox-tax-calculator', category: 'Gaming' },
+  { id: 30, title: 'Null Space Calculator', description: 'Compute the null space (kernel) of a matrix', icon: '🧮', color: 'from-purple-500 to-pink-600', link: '/null-space-calculator', category: 'Mathematics' },
 
 ];
 
