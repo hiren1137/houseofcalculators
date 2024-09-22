@@ -53,7 +53,7 @@ const calculators: Calculator[] = [
   { id: 34, title: 'Convolution Calculator', description: 'Compute the convolution of two sequences', icon: '🔄', color: 'from-blue-500 to-blue-600', link: '/convolution-calculator', category: 'Mathematics' },
   { id: 35, title: 'Jump Calculator 5e', description: 'Calculate your jump distance based on D&D 5th Edition rules', icon: '🏃‍♂️', color: 'from-purple-500 to-purple-600', link: '/jump-calculator-5e', category: 'Gaming' },
   { id: 36, title: 'Arkansas Child Support Calculator', description: 'Estimate your child support obligations based on Arkansas state guidelines', icon: '👨‍👩‍👧‍👦', color: 'from-red-500 to-red-600', link: '/arkansas-child-support-calculator', category: 'Finance' },
-
+  { id: 37, title: 'CD Ladder Calculator', description: 'Plan your Certificate of Deposit (CD) ladder strategy to maximize returns and maintain liquidity', icon: '📈', color: 'from-blue-500 to-blue-600', link: '/cd-ladder-calculator', category: 'Finance' },
 
 ];
 

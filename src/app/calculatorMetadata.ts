@@ -160,5 +160,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Calculate your child support obligations accurately using our Arkansas Child Support Calculator. Ideal for parents and legal professionals.', 
   keywords: 'Arkansas child support calculator, child support obligations, legal calculator, family law, Arkansas legal tools',
 },
+'cd-ladder-calculator': { 
+  title: 'CD Ladder Calculator - House of Calculators', 
+  description: 'Optimize your investment strategy with our CD Ladder Calculator. Plan your Certificate of Deposit ladder to maximize returns while maintaining liquidity.', 
+  keywords: 'CD ladder calculator, certificate of deposit ladder, investment calculator, finance tools, CD investment strategy',
+},
 
 }

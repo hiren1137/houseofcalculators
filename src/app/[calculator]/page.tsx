@@ -57,6 +57,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'convolution-calculator': () => import('../components/Calculators/ConvolutionCalculator'),
   'jump-calculator-5e': () => import('../components/Calculators/JumpCalculator5e'),
   'arkansas-child-support-calculator': () => import('../components/Calculators/ArkansasChildSupportCalculator'),
+  'cd-ladder-calculator': () => import('../components/Calculators/CDLadderCalculator'),
+
 
 
 };
