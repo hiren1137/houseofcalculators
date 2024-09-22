@@ -165,5 +165,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Optimize your investment strategy with our CD Ladder Calculator. Plan your Certificate of Deposit ladder to maximize returns while maintaining liquidity.', 
   keywords: 'CD ladder calculator, certificate of deposit ladder, investment calculator, finance tools, CD investment strategy',
 },
+'linear-independence-calculator': { 
+  title: 'Linear Independence Calculator - House of Calculators', 
+  description: 'Determine if your set of vectors is linearly independent or dependent with our easy-to-use calculator. Enhance your understanding of linear algebra concepts.', 
+  keywords: 'linear independence calculator, vector independence, linear algebra tools, math calculators, linear dependence',
+},
 
 }

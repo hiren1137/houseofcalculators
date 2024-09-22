@@ -58,8 +58,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'jump-calculator-5e': () => import('../components/Calculators/JumpCalculator5e'),
   'arkansas-child-support-calculator': () => import('../components/Calculators/ArkansasChildSupportCalculator'),
   'cd-ladder-calculator': () => import('../components/Calculators/CDLadderCalculator'),
-
-
+  'linear-independence-calculator': () => import('../components/Calculators/LinearIndependenceCalculator'),
 
 };
 
