@@ -150,4 +150,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Compute the convolution of two sequences using our easy-to-use Convolution Calculator. Ideal for students and engineers.', 
   keywords: 'convolution calculator, math calculator, signal processing, discrete convolution, sequences convolution',
 },
+'jump-calculator-5e': { 
+  title: 'Jump Calculator 5e - House of Calculators', 
+  description: 'Determine your jump distance using the Dungeons & Dragons 5th Edition Jump Calculator. Perfect for players and dungeon masters.', 
+  keywords: 'jump calculator 5e, D&D jump calculator, role-playing game tools, Dungeons and Dragons, gaming calculator',
+},
 }

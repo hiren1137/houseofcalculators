@@ -55,6 +55,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'jacobian-calculator': () => import('../components/Calculators/JacobianCalculator'),
   'electron-configuration-calculator':() => import ('../components/Calculators/ElectronConfigurationCalculator'),
   'convolution-calculator': () => import('../components/Calculators/ConvolutionCalculator'),
+  'jump-calculator-5e': () => import('../components/Calculators/JumpCalculator5e'),
+
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
