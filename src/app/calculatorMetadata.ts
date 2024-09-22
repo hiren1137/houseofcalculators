@@ -155,4 +155,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Determine your jump distance using the Dungeons & Dragons 5th Edition Jump Calculator. Perfect for players and dungeon masters.', 
   keywords: 'jump calculator 5e, D&D jump calculator, role-playing game tools, Dungeons and Dragons, gaming calculator',
 },
+'arkansas-child-support-calculator': { 
+  title: 'Arkansas Child Support Calculator - House of Calculators', 
+  description: 'Calculate your child support obligations accurately using our Arkansas Child Support Calculator. Ideal for parents and legal professionals.', 
+  keywords: 'Arkansas child support calculator, child support obligations, legal calculator, family law, Arkansas legal tools',
+},
+
 }
