@@ -54,7 +54,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'iowa-paycheck-calculator': () => import('../components/Calculators/IowaPaycheckCalculator'),
   'jacobian-calculator': () => import('../components/Calculators/JacobianCalculator'),
   'electron-configuration-calculator':() => import ('../components/Calculators/ElectronConfigurationCalculator'),
-
+  'convolution-calculator': () => import('../components/Calculators/ConvolutionCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

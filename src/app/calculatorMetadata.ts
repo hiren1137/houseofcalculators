@@ -145,4 +145,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Determine the electron configuration of elements using our easy-to-use Electron Configuration Calculator. Ideal for students and chemistry enthusiasts.', 
   keywords: 'electron configuration calculator, chemistry calculator, electron shells, periodic table, element electron configuration',
 },
+'convolution-calculator': { 
+  title: 'Convolution Calculator - House of Calculators', 
+  description: 'Compute the convolution of two sequences using our easy-to-use Convolution Calculator. Ideal for students and engineers.', 
+  keywords: 'convolution calculator, math calculator, signal processing, discrete convolution, sequences convolution',
+},
 }
