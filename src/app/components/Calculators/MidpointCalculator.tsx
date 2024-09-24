@@ -1,31 +1,43 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useRef } from 'react';
 import { Chart, ChartConfiguration, ScatterController, LineController, PointElement, LineElement, LinearScale } from 'chart.js';
 
 Chart.register(ScatterController, LineController, PointElement, LineElement, LinearScale);
 
 interface Point {
-  x: number;
-  y: number;
+  x: string;
+  y: string;
 }
 
 export default function MidpointCalculator() {
-  const [point1, setPoint1] = useState<Point>({ x: 3, y: 4 });
-  const [point2, setPoint2] = useState<Point>({ x: 3, y: 8 });
-  const [midpoint, setMidpoint] = useState<Point | null>(null);
+  const [point1, setPoint1] = useState<Point>({ x: '', y: '' });
+  const [point2, setPoint2] = useState<Point>({ x: '', y: '' });
+  const [midpoint, setMidpoint] = useState<{ x: number; y: number } | null>(null);
   const chartRef = useRef<HTMLCanvasElement | null>(null);
   const chartInstance = useRef<Chart | null>(null);
 
   const calculateMidpoint = () => {
+    const x1 = parseFloat(point1.x);
+    const y1 = parseFloat(point1.y);
+    const x2 = parseFloat(point2.x);
+    const y2 = parseFloat(point2.y);
+
+    if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) {
+      setMidpoint(null);
+      alert('Please enter valid numbers for all coordinates.');
+      return;
+    }
+
     const mid = {
-      x: (point1.x + point2.x) / 2,
-      y: (point1.y + point2.y) / 2
+      x: (x1 + x2) / 2,
+      y: (y1 + y2) / 2,
     };
     setMidpoint(mid);
+    updateChart(x1, y1, x2, y2, mid);
   };
 
-  const updateChart = useCallback(() => {
+  const updateChart = (x1: number, y1: number, x2: number, y2: number, mid: { x: number; y: number }) => {
     if (chartRef.current) {
       const ctx = chartRef.current.getContext('2d');
       if (ctx) {
@@ -40,22 +52,22 @@ export default function MidpointCalculator() {
               {
                 label: 'Points',
                 data: [
-                  { x: point1.x, y: point1.y },
-                  { x: point2.x, y: point2.y },
+                  { x: x1, y: y1 },
+                  { x: x2, y: y2 },
                 ],
                 backgroundColor: 'rgb(255, 99, 132)',
               },
               {
                 label: 'Midpoint',
-                data: midpoint ? [midpoint] : [],
+                data: [mid],
                 backgroundColor: 'rgb(75, 192, 192)',
               },
               {
                 type: 'line',
                 label: 'Line',
                 data: [
-                  { x: point1.x, y: point1.y },
-                  { x: point2.x, y: point2.y },
+                  { x: x1, y: y1 },
+                  { x: x2, y: y2 },
                 ],
                 borderColor: 'rgb(75, 192, 192)',
                 fill: false,
@@ -71,12 +83,12 @@ export default function MidpointCalculator() {
                   color: 'white',
                   font: {
                     size: 14,
-                    weight: 'bold'
-                  }
+                    weight: 'bold',
+                  },
                 },
                 grid: {
-                  color: 'rgba(255, 255, 255, 0.1)'
-                }
+                  color: 'rgba(255, 255, 255, 0.1)',
+                },
               },
               y: {
                 type: 'linear',
@@ -85,12 +97,12 @@ export default function MidpointCalculator() {
                   color: 'white',
                   font: {
                     size: 14,
-                    weight: 'bold'
-                  }
+                    weight: 'bold',
+                  },
                 },
                 grid: {
-                  color: 'rgba(255, 255, 255, 0.1)'
-                }
+                  color: 'rgba(255, 255, 255, 0.1)',
+                },
               },
             },
             plugins: {
@@ -99,40 +111,35 @@ export default function MidpointCalculator() {
                   color: 'white',
                   font: {
                     size: 14,
-                    weight: 'bold'
-                  }
-                }
-              }
-            }
+                    weight: 'bold',
+                  },
+                },
+              },
+            },
           },
         };
 
         chartInstance.current = new Chart(ctx, config);
       }
     }
-  }, [point1, point2, midpoint]);
-
-  useEffect(() => {
-    updateChart();
-  }, [updateChart]);
+  };
 
   const handleInputChange = (point: 'point1' | 'point2', coord: 'x' | 'y', value: string) => {
-    const numValue = value === '' ? 0 : Number(value);
     if (point === 'point1') {
-      setPoint1(prev => ({ ...prev, [coord]: numValue }));
+      setPoint1((prev) => ({ ...prev, [coord]: value }));
     } else {
-      setPoint2(prev => ({ ...prev, [coord]: numValue }));
+      setPoint2((prev) => ({ ...prev, [coord]: value }));
     }
   };
 
   return (
     <div className="max-w-4xl mx-auto mt-10 p-8 bg-gradient-to-br from-purple-900 to-indigo-900 rounded-2xl shadow-2xl text-white">
       <h1 className="text-4xl font-bold mb-6 text-center">Midpoint Calculator</h1>
-      
+
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4 text-purple-200">Find the Middle Ground</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          Welcome to our Midpoint Calculator! This tool helps you find the exact center point between any two coordinates on a 2D plane. Whether you&apos;re working on geometry homework or planning the perfect meeting spot between two locations, our calculator has got you covered.
+          Welcome to our Midpoint Calculator! This tool helps you find the exact center point between any two coordinates on a 2D plane. Whether you're working on geometry homework or planning the perfect meeting spot between two locations, our calculator has got you covered.
         </p>
       </section>
 
@@ -199,7 +206,7 @@ export default function MidpointCalculator() {
       <section className="mt-12">
         <h2 className="text-3xl font-semibold mb-4 text-purple-200">The Magic of Midpoints</h2>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
-          In mathematics, the midpoint is the point that divides a line segment into two equal parts. It&apos;s a fundamental concept in geometry with numerous practical applications.
+          In mathematics, the midpoint is the point that divides a line segment into two equal parts. It's a fundamental concept in geometry with numerous practical applications.
         </p>
         <h3 className="text-2xl font-semibold mb-2 text-purple-200">The Midpoint Formula</h3>
         <p className="text-xl text-gray-300 mb-4 leading-relaxed">
