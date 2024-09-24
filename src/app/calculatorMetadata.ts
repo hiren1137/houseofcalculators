@@ -176,5 +176,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   description: 'Calculate adjusted values using the square root curve with our intuitive calculator. Visualize the impact with interactive graphs.',
   keywords: 'square root curve calculator, value adjustment tool, mathematical calculator, square root curve graph, data transformation',
 },
-
+'circumference-to-diameter-calculator': {
+  title: 'Circumference to Diameter Calculator - House of Calculators',
+  description: 'Easily convert the circumference of a circle to its diameter with our intuitive calculator. Understand the relationship between circumference and diameter.',
+  keywords: 'circumference to diameter calculator, circle calculations, math tools, geometry calculator, circle circumference diameter',
+},
 }
