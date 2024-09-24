@@ -62,6 +62,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'square-root-curve-calculator': () => import('../components/Calculators/SquareRootCurveCalculator'),
   'circumference-to-diameter-calculator': () => import('../components/Calculators/CircumferenceToDiameterCalculator'),
   'double-angle-formula-calculator': () => import('../components/Calculators/DoubleAngleFormulaCalculator'),
+  'round-to-nearest-cent-calculator': () => import('../components/Calculators/RoundToNearestCentCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

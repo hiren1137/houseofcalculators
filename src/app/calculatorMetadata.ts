@@ -188,5 +188,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   keywords:
     'double angle formula calculator, trigonometry calculator, sin 2A, cos 2A, tan 2A, trigonometric identities, math tools',
 },
+'round-to-nearest-cent-calculator': {
+  title: 'Round to the Nearest Cent Calculator - House of Calculators',
+  description: 'Quickly round any monetary amount to the nearest cent with our precise calculator. Essential for financial accuracy in transactions and accounting.',
+},
 
 }
