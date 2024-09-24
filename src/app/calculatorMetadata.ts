@@ -179,6 +179,14 @@ export const calculatorMetadata: CalculatorMetadata = {
 'circumference-to-diameter-calculator': {
   title: 'Circumference to Diameter Calculator - House of Calculators',
   description: 'Easily convert the circumference of a circle to its diameter with our intuitive calculator. Understand the relationship between circumference and diameter.',
-  keywords: 'circumference to diameter calculator, circle calculations, math tools, geometry calculator, circle circumference diameter',
+  keywords: 'circumference to diameter calculator, circle calculations, circ to diameter, geometry calculator, circle circumference diameter',
 },
+'double-angle-formula-calculator': {
+  title: 'Double Angle Formula Calculator - House of Calculators',
+  description:
+    'Compute double angle trigonometric values using our intuitive calculator. Learn about double angle formulas with detailed explanations.',
+  keywords:
+    'double angle formula calculator, trigonometry calculator, sin 2A, cos 2A, tan 2A, trigonometric identities, math tools',
+},
+
 }

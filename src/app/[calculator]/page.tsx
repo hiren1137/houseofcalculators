@@ -61,6 +61,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'linear-independence-calculator': () => import('../components/Calculators/LinearIndependenceCalculator'),
   'square-root-curve-calculator': () => import('../components/Calculators/SquareRootCurveCalculator'),
   'circumference-to-diameter-calculator': () => import('../components/Calculators/CircumferenceToDiameterCalculator'),
+  'double-angle-formula-calculator': () => import('../components/Calculators/DoubleAngleFormulaCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {
