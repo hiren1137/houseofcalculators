@@ -55,7 +55,7 @@ const calculators: Calculator[] = [
   { id: 36, title: 'Arkansas Child Support Calculator', description: 'Estimate your child support obligations based on Arkansas state guidelines', icon: '👨‍👩‍👧‍👦', color: 'from-red-500 to-red-600', link: '/arkansas-child-support-calculator', category: 'Finance' },
   { id: 37, title: 'CD Ladder Calculator', description: 'Plan your Certificate of Deposit (CD) ladder strategy to maximize returns and maintain liquidity', icon: '📈', color: 'from-blue-500 to-blue-600', link: '/cd-ladder-calculator', category: 'Finance' },
   { id: 38, title: 'Linear Independence Calculator', description: 'Determine if a set of vectors is linearly independent or dependent with our easy-to-use calculator.', icon: '🧮', color: 'from-green-500 to-green-600', link: '/linear-independence-calculator', category: 'Mathematics' },
-
+  { id: 39, title: 'Square Root Curve Calculator', description: 'Visualize and understand the square root function with our interactive calculator.', icon: '√', color: 'from-blue-500 to-blue-600', link: '/square-root-curve-calculator', category: 'Mathematics' },
 
 ];
 

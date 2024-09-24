@@ -59,7 +59,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'arkansas-child-support-calculator': () => import('../components/Calculators/ArkansasChildSupportCalculator'),
   'cd-ladder-calculator': () => import('../components/Calculators/CDLadderCalculator'),
   'linear-independence-calculator': () => import('../components/Calculators/LinearIndependenceCalculator'),
-
+  'square-root-curve-calculator': () => import('../components/Calculators/SquareRootCurveCalculator'),
 };
 
 export default function CalculatorPage({ params }: Props): JSX.Element {

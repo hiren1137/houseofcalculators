@@ -171,4 +171,10 @@ export const calculatorMetadata: CalculatorMetadata = {
   keywords: 'linear independence calculator, vector independence, linear algebra tools, math calculators, linear dependence',
 },
 
+'square-root-curve-calculator': {
+  title: 'Square Root Curve Calculator - House of Calculators',
+  description: 'Calculate adjusted values using the square root curve with our intuitive calculator. Visualize the impact with interactive graphs.',
+  keywords: 'square root curve calculator, value adjustment tool, mathematical calculator, square root curve graph, data transformation',
+},
+
 }
