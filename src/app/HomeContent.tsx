@@ -59,6 +59,9 @@ const calculators: Calculator[] = [
   { id: 40, title: 'Circumference to Diameter Calculator', description: 'Easily convert the circumference of a circle to its diameter with our intuitive calculator.', icon: '⭕', color: 'from-green-500 to-green-600', link: '/circumference-to-diameter-calculator', category: 'Mathematics' },
   { id: 41, title: 'Double Angle Formula Calculator', description: 'Compute double angle trigonometric values using our intuitive calculator.', icon: '📐', color: 'from-red-500 to-red-600', link: '/double-angle-formula-calculator', category: 'Mathematics' },
   { id: 42, title: 'Round to the Nearest Cent Calculator', description: 'Quickly round any monetary amount to the nearest cent with our precise calculator.', icon: '💰', color: 'from-yellow-500 to-yellow-600', link: '/round-to-nearest-cent-calculator', category: 'Finance' },
+  { id: 43, title: 'Productivity Calculator', description: 'Optimize your work schedule and calculate your perfect end time with our productivity calculator.', icon: '⏰', color: 'from-blue-500 to-blue-600', link: '/productivity-calculator', category: 'Everyday Use' },
+
+
 
 ];
 

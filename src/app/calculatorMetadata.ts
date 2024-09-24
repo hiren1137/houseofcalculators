@@ -192,5 +192,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Round to the Nearest Cent Calculator - House of Calculators',
   description: 'Quickly round any monetary amount to the nearest cent with our precise calculator. Essential for financial accuracy in transactions and accounting.',
 },
-
+'productivity-calculator': {
+  title: 'Productivity Calculator - House of Calculators',
+  description: 'Optimize your work schedule and calculate your perfect end time with our productivity calculator. Enhance efficiency and manage time effectively.',
+},
 }
