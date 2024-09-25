@@ -67,7 +67,7 @@ const calculators: Calculator[] = [
 
 export default function HomeContent() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [displayCount, setDisplayCount] = useState(6);
+  const [displayCount, setDisplayCount] = useState(12);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const searchParams = useSearchParams();
 
@@ -86,7 +86,7 @@ export default function HomeContent() {
   const displayedCalculators = searchTerm || selectedCategory ? filteredCalculators : calculators.slice(0, displayCount);
 
   const loadMore = () => {
-    setDisplayCount(prevCount => Math.min(prevCount + 6, calculators.length));
+    setDisplayCount(prevCount => Math.min(prevCount + 12, calculators.length));
   };
 
   return (
