@@ -64,6 +64,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'double-angle-formula-calculator': () => import('../components/Calculators/DoubleAngleFormulaCalculator'),
   'round-to-nearest-cent-calculator': () => import('../components/Calculators/RoundToNearestCentCalculator'),
   'productivity-calculator': () => import('../components/Calculators/ProductivityCalculator'), // Fixed typo in 'ProductyvityCalculator'
+  'circumcenter-calculator': () => import('../components/Calculators/CircumcenterCalculator'),
 };
 
 

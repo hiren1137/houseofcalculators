@@ -196,4 +196,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Productivity Calculator - House of Calculators',
   description: 'Optimize your work schedule and calculate your perfect end time with our productivity calculator. Enhance efficiency and manage time effectively.',
 },
+'circumcenter-calculator' : {
+  title: 'Circumcenter Calculator - House of Calculators',
+  description: 'Use Circumcenter Calculator to determine the circumcenter and circumradius of any triangle by inputting the coordinates of its vertices. Perfect for geometry students and enthusiasts.',
+},
 }
