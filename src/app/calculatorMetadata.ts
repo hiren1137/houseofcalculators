@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import MmToInchesConverterCalculator from './components/Calculators/MmToInchesConverterCalculator'
 
 type CalculatorMetadata = {
   [key: string]: Metadata
@@ -199,5 +200,9 @@ export const calculatorMetadata: CalculatorMetadata = {
 'circumcenter-calculator' : {
   title: 'Circumcenter Calculator - House of Calculators',
   description: 'Use Circumcenter Calculator to determine the circumcenter and circumradius of any triangle by inputting the coordinates of its vertices. Perfect for geometry students and enthusiasts.',
+},
+'mm-to-inches-converter-calculator': {
+  title:'xncxx mm to Inches Converter Calculator - House of Calculators',
+  description: 'Use our xncxx mm to Inches Converter Calculator to easily convert millimeters to inches. Perfect for engineers, students, and professionals needing precise length conversions.',
 },
 }

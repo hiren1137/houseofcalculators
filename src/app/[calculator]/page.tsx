@@ -65,6 +65,8 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'round-to-nearest-cent-calculator': () => import('../components/Calculators/RoundToNearestCentCalculator'),
   'productivity-calculator': () => import('../components/Calculators/ProductivityCalculator'), // Fixed typo in 'ProductyvityCalculator'
   'circumcenter-calculator': () => import('../components/Calculators/CircumcenterCalculator'),
+  'mm-to-inches-converter-calculator': () => import('../components/Calculators/MmToInchesConverterCalculator'),
+
 };
 
 
