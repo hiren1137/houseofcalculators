@@ -61,7 +61,8 @@ const calculators: Calculator[] = [
   { id: 42, title: 'Round to the Nearest Cent Calculator', description: 'Quickly round any monetary amount to the nearest cent with our precise calculator.', icon: '💰', color: 'from-yellow-500 to-yellow-600', link: '/round-to-nearest-cent-calculator', category: 'Finance' },
   { id: 43, title: 'Productivity Calculator', description: 'Optimize your work schedule and calculate your perfect end time with our productivity calculator.', icon: '⏰', color: 'from-blue-500 to-blue-600', link: '/productivity-calculator', category: 'Everyday Use' },
   { id: 44, title: 'Circumcenter Calculator', description: 'Calculate the circumcenter and circumradius of a triangle by entering the coordinates of its vertices.', icon: '📐', color: 'from-green-500 to-green-600', link: '/circumcenter-calculator', category: 'Mathematics' },
-  { id: 45, title: 'mm to Inches Converter Calculator', description: 'Convert millimeters to inches quickly and accurately with our easy-to-use mm to inches converter calculator.', icon: '📏', color: 'from-red-500 to-red-600', link: '/mm-to-inches-converter-calculator', category: 'Everyday Use' },
+  { id: 45, title: 'xncxx mm to Inches Converter Calculator', description: 'Convert millimeters to inches quickly and accurately with our easy-to-use mm to inches converter calculator.', icon: '📏', color: 'from-red-500 to-red-600', link: '/mm-to-inches-converter-calculator', category: 'Everyday Use' },
+  { id: 46, title: 'Coulomb\'s Law Calculator', description: 'Calculate the electric force between two charges using Coulomb\'s Law with our easy-to-use Coulomb\'s Law Calculator.', icon: '⚡', color: 'from-blue-500 to-blue-600', link: '/coulombs-law-calculator', category: 'Science' },
 
 ];
 

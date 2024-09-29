@@ -205,4 +205,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title:'xncxx mm to Inches Converter Calculator - House of Calculators',
   description: 'Use our xncxx mm to Inches Converter Calculator to easily convert millimeters to inches. Perfect for engineers, students, and professionals needing precise length conversions.',
 },
+'coulombs-law-calculator': {
+  title: 'Coulomb\'s Law Calculator - Electric Force Between Charges - House of Calculators',
+  description: 'Use our Coulomb\'s Law Calculator to easily compute the electric force between two charges. Perfect for physics students, engineers, and scientists working with electrostatics.',
+},
 }
