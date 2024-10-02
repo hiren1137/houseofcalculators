@@ -68,6 +68,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'mm-to-inches-converter-calculator': () => import('../components/Calculators/MmToInchesConverterCalculator'),
   'coulombs-law-calculator': () => import('../components/Calculators/CoulombsLawCalculator'),
   'contact-lens-vertex-calculator': () => import('../components/Calculators/ContactLensVertexCalculator'),
+  'chebyshevs-theorem-calculator': () => import ('../components/Calculators/ChebyshevsTheoremCalculator'),
 };
 
 

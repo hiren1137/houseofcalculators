@@ -213,4 +213,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Contact Lens Vertex Calculator - Adjust Eyeglass Prescription - House of Calculators',
   description: 'Use our Contact Lens Vertex Calculator to accurately adjust your eyeglass prescription for contact lenses. Simplify your vision correction process today.',
 },
+'chebyshevs-theorem-calculator': {
+  title: 'Chebyshev\'s Theorem Calculator - Statistical Probability - House of Calculators',
+  description: 'Use our Chebyshev\'s Theorem Calculator to determine the minimum probability that a value lies within a specified number of standard deviations from the mean. Ideal for statistics students and professionals.',
+},
 }
