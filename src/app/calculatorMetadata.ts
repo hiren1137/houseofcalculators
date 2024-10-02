@@ -209,4 +209,8 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Coulomb\'s Law Calculator - Electric Force Between Charges - House of Calculators',
   description: 'Use our Coulomb\'s Law Calculator to easily compute the electric force between two charges. Perfect for physics students, engineers, and scientists working with electrostatics.',
 },
+'contact-lens-vertex-calculator': {
+  title: 'Contact Lens Vertex Calculator - Adjust Eyeglass Prescription - House of Calculators',
+  description: 'Use our Contact Lens Vertex Calculator to accurately adjust your eyeglass prescription for contact lenses. Simplify your vision correction process today.',
+},
 }

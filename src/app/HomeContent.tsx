@@ -63,6 +63,8 @@ const calculators: Calculator[] = [
   { id: 44, title: 'Circumcenter Calculator', description: 'Calculate the circumcenter and circumradius of a triangle by entering the coordinates of its vertices.', icon: '📐', color: 'from-green-500 to-green-600', link: '/circumcenter-calculator', category: 'Mathematics' },
   { id: 45, title: 'xncxx mm to Inches Converter Calculator', description: 'Convert millimeters to inches quickly and accurately with our easy-to-use mm to inches converter calculator.', icon: '📏', color: 'from-red-500 to-red-600', link: '/mm-to-inches-converter-calculator', category: 'Everyday Use' },
   { id: 46, title: 'Coulomb\'s Law Calculator', description: 'Calculate the electric force between two charges using Coulomb\'s Law with our easy-to-use Coulomb\'s Law Calculator.', icon: '⚡', color: 'from-blue-500 to-blue-600', link: '/coulombs-law-calculator', category: 'Science' },
+  { id: 47, title: 'Contact Lens Vertex Calculator', description: 'Adjust your eyeglass prescription for contact lenses with our easy-to-use Contact Lens Vertex Calculator.', icon: '👓', color: 'from-green-500 to-teal-600', link: '/contact-lens-vertex-calculator', category: 'Everyday Use' },
+
 
 ];
 

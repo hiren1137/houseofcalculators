@@ -67,6 +67,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'circumcenter-calculator': () => import('../components/Calculators/CircumcenterCalculator'),
   'mm-to-inches-converter-calculator': () => import('../components/Calculators/MmToInchesConverterCalculator'),
   'coulombs-law-calculator': () => import('../components/Calculators/CoulombsLawCalculator'),
+  'contact-lens-vertex-calculator': () => import('../components/Calculators/ContactLensVertexCalculator'),
 };
 
 
