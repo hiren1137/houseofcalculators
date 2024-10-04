@@ -217,4 +217,9 @@ export const calculatorMetadata: CalculatorMetadata = {
   title: 'Chebyshev\'s Theorem Calculator - Statistical Probability - House of Calculators',
   description: 'Use our Chebyshev\'s Theorem Calculator to determine the minimum probability that a value lies within a specified number of standard deviations from the mean. Ideal for statistics students and professionals.',
 },
+'cartesian-to-polar-calculator': {
+  title: 'Cartesian to Polar Calculator - Coordinate Converter - House of Calculators',
+  description: 'Use our Cartesian to Polar Calculator to easily convert Cartesian (x, y) coordinates to Polar (r, θ) coordinates. Perfect for students and professionals dealing with trigonometry and vector calculations.',
+},
+
 }

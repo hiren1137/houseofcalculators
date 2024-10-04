@@ -69,6 +69,7 @@ const calculators: { [key: string]: () => Promise<{ default: React.ComponentType
   'coulombs-law-calculator': () => import('../components/Calculators/CoulombsLawCalculator'),
   'contact-lens-vertex-calculator': () => import('../components/Calculators/ContactLensVertexCalculator'),
   'chebyshevs-theorem-calculator': () => import ('../components/Calculators/ChebyshevsTheoremCalculator'),
+  'cartesian-to-polar-calculator': () => import('../components/Calculators/CartesianToPolarCalculator'),
 };
 
 

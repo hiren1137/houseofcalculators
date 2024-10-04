@@ -65,9 +65,7 @@ const calculators: Calculator[] = [
   { id: 46, title: 'Coulomb\'s Law Calculator', description: 'Calculate the electric force between two charges using Coulomb\'s Law with our easy-to-use Coulomb\'s Law Calculator.', icon: '⚡', color: 'from-blue-500 to-blue-600', link: '/coulombs-law-calculator', category: 'Science' },
   { id: 47, title: 'Contact Lens Vertex Calculator', description: 'Adjust your eyeglass prescription for contact lenses with our easy-to-use Contact Lens Vertex Calculator.', icon: '👓', color: 'from-green-500 to-teal-600', link: '/contact-lens-vertex-calculator', category: 'Everyday Use' },
   { id: 48, title: 'Chebyshev\'s Theorem Calculator', description: 'Calculate the minimum probability using Chebyshev\'s Theorem with our easy-to-use Chebyshev\'s Theorem Calculator.', icon: '📊', color: 'from-purple-500 to-indigo-600', link: '/chebyshevs-theorem-calculator', category: 'Mathematics' },
-
-
-
+  { id: 49, title: 'Cartesian to Polar Calculator', description: 'Convert Cartesian coordinates to Polar coordinates with our easy-to-use Cartesian to Polar Calculator.', icon: '📐', color: 'from-green-500 to-teal-600', link: '/cartesian-to-polar-calculator', category: 'Mathematics' }
 
 ];
 
