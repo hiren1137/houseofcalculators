@@ -2,71 +2,36 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import Head from 'next/head';
+import { useSearchParams } from 'next/navigation.js'; 
 import Header from './components/Header';
+import { categories, calculators } from '@/lib/calculator-data';
+import CalculatorGrid from './components/CalculatorGrid';
 
-type Calculator = {
-  id: number;
-  title: string;
-  description: string;
-  icon: string;
-  color: string;
-  link: string;
-  category: string;
-};
+const h1Title = "Free Online Calculators: Mathematics, Finance, Health & Engineering Tools";
 
-const calculators: Calculator[] = [
-  { id: 1, title: 'Snow Day Calculator', description: 'Predict snow day likelihood', icon: '❄️', color: 'from-blue-500 to-blue-600', link: '/snow-day-calculator', category: 'Everyday Use' },
-  { id: 2, title: 'Bottleneck Calculator', description: 'Find performance bottlenecks', icon: '💻', color: 'from-red-500 to-red-600', link: '/bottleneck-calculator', category: 'Engineering' },
-  { id: 3, title: 'RREF Calculator', description: 'Reduced Row Echelon Form', icon: '🎓', color: 'from-green-500 to-green-600', link: '/rref-calculator', category: 'Mathematics' },
-  { id: 4, title: 'Cross Product Calculator', description: 'Calculate vector cross product', icon: '📐', color: 'from-yellow-500 to-yellow-600', link: '/cross-product-calculator', category: 'Mathematics' },
-  { id: 5, title: 'ACFT Calculator', description: 'Army Combat Fitness Test', icon: '💪', color: 'from-pink-500 to-pink-600', link: '/acft-calculator', category: 'Health' },
-  { id: 6, title: 'TI-84 Calculator Online', description: 'Simulate TI-84', icon: '🖩', color: 'from-indigo-500 to-indigo-600', link: '/ti-84-calculator', category: 'Mathematics' },
-  { id: 7, title: 'A1C Calculator', description: 'Estimate A1C levels', icon: '🩸', color: 'from-teal-500 to-teal-600', link: '/a1c-calculator', category: 'Health' },
-  { id: 8, title: 'Midpoint Calculator', description: 'Find the midpoint between points', icon: '📏', color: 'from-orange-500 to-orange-600', link: '/midpoint-calculator', category: 'Mathematics' },
-  { id: 9, title: 'Taylor Series Calculator', description: 'Calculate Taylor Series', icon: '📈', color: 'from-cyan-500 to-cyan-600', link: '/taylor-series-calculator', category: 'Mathematics' },
-  { id: 10, title: 'Board Foot Calculator', description: 'Calculate lumber volume and cost', icon: '🪵', color: 'from-green-500 to-green-600', link: '/board-foot-calculator', category: 'Everyday Use' },
-  { id: 11, title: 'Vorici Chromatic Calculator', description: 'Optimize Path of Exile socket coloring', icon: '🔮', color: 'from-purple-500 to-purple-600', link: '/vorici-chromatic-calculator', category: 'Gaming' },
-  { id: 12, title: 'Army Body Fat Calculator', description: 'Measure body composition for U.S. military standards', icon: '📏', color: 'from-red-500 to-red-600', link: '/army-body-fat-calculator', category: 'Health' },
-  { id: 13, title: 'Dot Product Calculator', description: 'Calculate the dot product of vectors', icon: '🔢', color: 'from-blue-500 to-blue-600', link: '/dot-product-calculator', category: 'Mathematics' },
-  { id: 14, title: 'Mean Absolute Deviation Calculator', description: 'Calculate the mean absolute deviation of a dataset', icon: '📊', color: 'from-pink-500 to-pink-600', link: '/mean-absolute-deviation-calculator', category: 'Mathematics' },
-  { id: 15, title: 'Bra Size Calculator', description: 'Estimate your bra size based on measurements', icon: '👙', color: 'from-purple-500 to-purple-600', link: '/bra-size-calculator', category: 'Everyday Use' },
-  { id: 16, title: 'Simpsons Rule Calculator', description: 'Calculate definite integrals using Simpson\'s Rule', icon: '📐', color: 'from-blue-500 to-blue-600', link: '/simpsons-rule-calculator', category: 'Mathematics' },
-  { id: 17, title: 'Quadratic Equation Solver', description: 'Solve quadratic equations using the quadratic formula', icon: '🧮', color: 'from-green-500 to-green-600', link: '/quadratic-equation-solver', category: 'Mathematics' },
-  { id: 18, title: 'CPM Calculator', description: 'Calculate cost per mille for advertising', icon: '💰', color: 'from-yellow-500 to-yellow-600', link: '/cpm-calculator', category: 'Finance' }, 
-  { id: 19, title: 'Point Buy Calculator', description: 'Customize your character\'s attributes', icon: '🎲', color: 'from-green-500 to-green-600', link: '/point-buy-calculator', category: 'Gaming' },
-  { id: 20, title: 'Motorcycle Loan Calculator', description: 'Estimate your motorcycle loan payments', icon: '🏍️', color: 'from-blue-500 to-blue-600', link: '/motorcycle-loan-calculator', category: 'Finance' },
-  { id: 21, title: 'BMI Calculator', description: 'Calculate your Body Mass Index', icon: '🧘‍♂️', color: 'from-purple-500 to-purple-600', link: '/bmi-calculator', category: 'Health' },
-  { id: 22, title: 'Angel Number Calculator', description: 'Discover your spiritual message', icon: '✨', color: 'from-purple-500 to-indigo-600', link: '/angel-number-calculator', category: 'Lifestyle & Spirituality' },
-  { id: 23, title: 'Tangent Line Calculator', description: 'Find the equation of a tangent line', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/tangent-line-calculator', category: 'Mathematics' },
-  { id: 24, title: 'Maryland Paycheck Calculator', description: 'Estimate your net pay after taxes and deductions', icon: '💰', color: 'from-green-500 to-green-600', link: '/maryland-paycheck-calculator', category: 'Finance' },
-  { id: 25, title: 'Interpolation Calculator', description: 'Estimate values using interpolation', icon: '📈', color: 'from-indigo-500 to-blue-600', link: '/interpolation-calculator', category: 'Mathematics' },
-  { id: 26, title: 'Riemann Sum Calculator', description: 'Approximate integrals using Riemann sums', icon: '∫', color: 'from-indigo-500 to-blue-600', link: '/riemann-sum-calculator', category: 'Mathematics' },
-  { id: 27, title: 'Partial Fraction Decomposition Calculator', description: 'Decompose rational functions into partial fractions', icon: '➗', color: 'from-indigo-500 to-blue-600', link: '/partial-fraction-decomposition-calculator', category: 'Mathematics' },
-  { id: 28, title: 'WASPI Compensation Calculator', description: 'Estimate your WASPI compensation', icon: '💼', color: 'from-green-500 to-green-600', link: '/waspi-compensation-calculator', category: 'Finance' },
-  { id: 29, title: 'Roblox Tax Calculator', description: 'Calculate Roblox marketplace fees', icon: '🎮', color: 'from-red-500 to-red-600', link: '/roblox-tax-calculator', category: 'Gaming' },
-  { id: 30, title: 'Null Space Calculator', description: 'Compute the null space (kernel) of a matrix', icon: '🧮', color: 'from-purple-500 to-pink-600', link: '/null-space-calculator', category: 'Mathematics' },
-  { id: 31, title: 'Iowa Paycheck Calculator', description: 'Estimate your net pay after taxes and deductions in Iowa', icon: '💸', color: 'from-blue-500 to-blue-600', link: '/iowa-paycheck-calculator', category: 'Finance' },
-  { id: 32, title: 'Jacobian Calculator', description: 'Compute the Jacobian matrix of a set of functions', icon: '🔢', color: 'from-yellow-500 to-yellow-600', link: '/jacobian-calculator', category: 'Mathematics' },
-  { id: 33, title: 'Electron Configuration Calculator', description: 'Calculate the electron configuration of elements', icon: '🔬', color: 'from-green-500 to-green-600', link: '/electron-configuration-calculator', category: 'Science' },
-  { id: 34, title: 'Convolution Calculator', description: 'Compute the convolution of two sequences', icon: '🔄', color: 'from-blue-500 to-blue-600', link: '/convolution-calculator', category: 'Mathematics' },
-  { id: 35, title: 'Jump Calculator 5e', description: 'Calculate your jump distance based on D&D 5th Edition rules', icon: '🏃‍♂️', color: 'from-purple-500 to-purple-600', link: '/jump-calculator-5e', category: 'Gaming' },
-  { id: 36, title: 'Arkansas Child Support Calculator', description: 'Estimate your child support obligations based on Arkansas state guidelines', icon: '👨‍👩‍👧‍👦', color: 'from-red-500 to-red-600', link: '/arkansas-child-support-calculator', category: 'Finance' },
-  { id: 37, title: 'CD Ladder Calculator', description: 'Plan your Certificate of Deposit (CD) ladder strategy to maximize returns and maintain liquidity', icon: '📈', color: 'from-blue-500 to-blue-600', link: '/cd-ladder-calculator', category: 'Finance' },
-  { id: 38, title: 'Linear Independence Calculator', description: 'Determine if a set of vectors is linearly independent or dependent with our easy-to-use calculator.', icon: '🧮', color: 'from-green-500 to-green-600', link: '/linear-independence-calculator', category: 'Mathematics' },
-  { id: 39, title: 'Square Root Curve Calculator', description: 'Visualize and understand the square root function with our interactive calculator.', icon: '√', color: 'from-blue-500 to-blue-600', link: '/square-root-curve-calculator', category: 'Mathematics' },
-  { id: 40, title: 'Circumference to Diameter Calculator', description: 'Easily convert the circumference of a circle to its diameter with our intuitive calculator.', icon: '⭕', color: 'from-green-500 to-green-600', link: '/circumference-to-diameter-calculator', category: 'Mathematics' },
-  { id: 41, title: 'Double Angle Formula Calculator', description: 'Compute double angle trigonometric values using our intuitive calculator.', icon: '📐', color: 'from-red-500 to-red-600', link: '/double-angle-formula-calculator', category: 'Mathematics' },
-  { id: 42, title: 'Round to the Nearest Cent Calculator', description: 'Quickly round any monetary amount to the nearest cent with our precise calculator.', icon: '💰', color: 'from-yellow-500 to-yellow-600', link: '/round-to-nearest-cent-calculator', category: 'Finance' },
-  { id: 43, title: 'Productivity Calculator', description: 'Optimize your work schedule and calculate your perfect end time with our productivity calculator.', icon: '⏰', color: 'from-blue-500 to-blue-600', link: '/productivity-calculator', category: 'Everyday Use' },
-  { id: 44, title: 'Circumcenter Calculator', description: 'Calculate the circumcenter and circumradius of a triangle by entering the coordinates of its vertices.', icon: '📐', color: 'from-green-500 to-green-600', link: '/circumcenter-calculator', category: 'Mathematics' },
-  { id: 45, title: 'xncxx mm to Inches Converter Calculator', description: 'Convert millimeters to inches quickly and accurately with our easy-to-use mm to inches converter calculator.', icon: '📏', color: 'from-red-500 to-red-600', link: '/mm-to-inches-converter-calculator', category: 'Everyday Use' },
-  { id: 46, title: 'Coulomb\'s Law Calculator', description: 'Calculate the electric force between two charges using Coulomb\'s Law with our easy-to-use Coulomb\'s Law Calculator.', icon: '⚡', color: 'from-blue-500 to-blue-600', link: '/coulombs-law-calculator', category: 'Science' },
-  { id: 47, title: 'Contact Lens Vertex Calculator', description: 'Adjust your eyeglass prescription for contact lenses with our easy-to-use Contact Lens Vertex Calculator.', icon: '👓', color: 'from-green-500 to-teal-600', link: '/contact-lens-vertex-calculator', category: 'Everyday Use' },
-  { id: 48, title: 'Chebyshev\'s Theorem Calculator', description: 'Calculate the minimum probability using Chebyshev\'s Theorem with our easy-to-use Chebyshev\'s Theorem Calculator.', icon: '📊', color: 'from-purple-500 to-indigo-600', link: '/chebyshevs-theorem-calculator', category: 'Mathematics' },
-  { id: 49, title: 'Cartesian to Polar Calculator', description: 'Convert Cartesian coordinates to Polar coordinates with our easy-to-use Cartesian to Polar Calculator.', icon: '📐', color: 'from-green-500 to-teal-600', link: '/cartesian-to-polar-calculator', category: 'Mathematics' }
+const metaDescription = "Access our comprehensive collection of 150+ free online calculators for mathematics, finance, health, engineering, and everyday calculations. Get precise results instantly with our user-friendly tools.";
 
+const faqs = [
+  {
+    question: "What types of calculators are available on House of Calculators?",
+    answer: "House of Calculators offers a wide range of tools across multiple categories including Mathematics (like RREF, Cross Product, Taylor Series), Finance (CPM, Mortgage), Health (BMI, A1C), Engineering (Bottleneck), and many more specialized calculators for everyday use."
+  },
+  {
+    question: "Are the calculators free to use?",
+    answer: "Yes, all calculators on our platform are completely free to use. We believe in providing accessible tools for everyone to solve their calculation needs without any cost barriers."
+  },
+  {
+    question: "How accurate are the calculations?",
+    answer: "Our calculators are designed with precision in mind, using industry-standard formulas and algorithms. Each calculator is thoroughly tested to ensure accurate results for your calculations."
+  },
+  {
+    question: "Can I use these calculators on my mobile device?",
+    answer: "Absolutely! Our website is fully responsive and optimized for all devices. Whether you're using a smartphone, tablet, or desktop computer, you'll have a seamless experience."
+  },
+  {
+    question: "Do I need to create an account to use the calculators?",
+    answer: "No account is required to use any of our calculators. Simply visit the website and start using the tools immediately without any registration process."
+  }
 ];
 
 export default function HomeContent() {
@@ -76,13 +41,15 @@ export default function HomeContent() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const category = searchParams.get('category');
+    const category = searchParams.get('category') || 
+      (typeof window !== 'undefined' ? window.location.pathname.slice(1) : null);
     setSelectedCategory(category);
     setSearchTerm('');
   }, [searchParams]);
 
   const filteredCalculators = calculators.filter(calc => 
-    (selectedCategory ? calc.category.toLowerCase() === selectedCategory.toLowerCase() : true) &&
+    (selectedCategory ? 
+      calc.category === categories.find(c => c.slug === selectedCategory)?.name : true) &&
     (calc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
      calc.description.toLowerCase().includes(searchTerm.toLowerCase()))
   );
@@ -95,12 +62,7 @@ export default function HomeContent() {
 
   return (
     <>
-      <Head>
-        <title>House of Calculators - Calculate Anything</title>
-        <meta name="description" content="A comprehensive collection of useful online calculators for everyday tasks and specialized needs. Find and use a wide range of calculators in one convenient location." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+
       <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
         <Header />
         <main className="flex-grow">
@@ -109,8 +71,19 @@ export default function HomeContent() {
               <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900"></div>
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-              <h2 className="text-5xl font-extrabold mb-4 text-white">Calculate Anything</h2>
-              <p className="text-xl text-gray-300 mb-8">Explore our vast collection of online calculators</p>
+              <h1 className="text-5xl font-extrabold mb-4 text-white">
+                {h1Title}
+              </h1>
+              
+              <div className="max-w-3xl mx-auto mt-8 text-gray-300">
+                <p className="text-lg mb-4">
+                  Welcome to House of Calculators, your trusted destination for precise calculations and problem-solving tools. We offer a comprehensive suite of calculators designed to simplify complex calculations across various fields.
+                </p>
+                <p className="text-lg mb-4">
+                  Whether you're a student tackling mathematics, a professional managing finances, or someone looking for everyday calculation tools, we've got you covered with our user-friendly and accurate calculators.
+                </p>
+              </div>
+
               <div className="relative max-w-md mx-auto mb-4">
                 <input
                   type="text"
@@ -139,7 +112,7 @@ export default function HomeContent() {
                     </div>
                     <p className="text-gray-400 mb-4">{calc.description}</p>
                     <Link
-                      href={calc.link}
+                      href={`/${calc.slug}`}
                       className="block w-full text-center bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded transition-colors duration-300"
                     >
                       Open Calculator
@@ -159,12 +132,95 @@ export default function HomeContent() {
               </div>
             )}
           </div>
+
+          <section className="max-w-4xl mx-auto px-4 py-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group bg-gray-800 rounded-lg"
+                >
+                  <summary className="flex justify-between items-center cursor-pointer p-6 text-lg font-medium">
+                    {faq.question}
+                    <span className="transform group-open:rotate-180 transition-transform duration-200">
+                      ▼
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-300">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <footer className="bg-gray-800 mt-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white">Calculator Categories</h3>
+                  <ul className="space-y-2">
+                    {categories.map((category) => (
+                      <li key={category.slug}>
+        <Link
+          href={`/${category.slug}`}
+          className={`text-gray-400 hover:text-white transition-colors ${
+            selectedCategory === category.slug ? 'text-white font-semibold' : ''
+          }`}
+        >
+                          {category.name} Calculators
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white">Popular Calculators</h3>
+                  <ul className="space-y-2">
+                    {calculators.slice(0, 5).map(calc => (
+                      <li key={calc.id}>
+                        <Link 
+                          href={`/${calc.slug}`}       // ✅ CORRECT (using calc.slug)
+                          className={`text-gray-400 hover:text-white transition-colors ${
+                            selectedCategory === calc.slug ? 'text-white font-semibold' : ''
+                          }`}
+                        >
+                          {calc.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white">About</h3>
+                  <p className="text-gray-400">
+                    House of Calculators provides free online calculation tools to help users solve complex problems quickly and accurately.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-white">Contact</h3>
+                  <p className="text-gray-400">
+                    Have suggestions or feedback? We'd love to hear from you.
+                  </p>
+                  <Link 
+                    href="/contact"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; {new Date().getFullYear()} House of Calculators. All rights reserved.</p>
+              </div>
+            </div>
+          </footer>
         </main>
-        <footer className="bg-gray-800 mt-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-400">
-            <p>&copy; 2024 Houseofcalculators.com. All rights reserved.</p>
-          </div>
-        </footer>
       </div>
     </>
   );
