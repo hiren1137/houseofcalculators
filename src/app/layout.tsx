@@ -26,7 +26,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-03LW4S96P8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-03LW4S96P8');
+            `
+          }}
+        />
+      </head>
+      <body>
+        <h1 className="text-5xl font-extrabold mb-4 text-white">
+          House of Calculators
+        </h1>
+        {children}
+      </body>
     </html>
   )
 }
