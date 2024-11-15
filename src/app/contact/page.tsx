@@ -9,7 +9,7 @@ export default function Contact() {
 
       <main className="flex-grow">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
+          <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
           <p className="text-xl mb-6">
             Have questions, suggestions, or feedback? We'd love to hear from you! Please feel free to reach out to us at:
           </p>

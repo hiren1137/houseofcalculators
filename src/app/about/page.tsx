@@ -8,7 +8,7 @@ export default function About() {
 
       <main className="flex-grow">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-4xl font-bold mb-8">About House of Calculators</h2>
+          <h1 className="text-4xl font-bold mb-8">About House of Calculators</h1>
           <p className="text-xl mb-6">
             Welcome to House of Calculators, your one-stop destination for all your calculation needs. We provide a wide range of online calculators to help you solve complex problems quickly and accurately.
           </p>

@@ -31,9 +31,9 @@ const Header = () => {
               height={40}
               className="mr-2 transition-transform duration-300 group-hover:scale-110"
             />
-            <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:from-pink-600 hover:to-purple-400 transition-all duration-300">
+            <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:from-pink-600 hover:to-purple-400 transition-all duration-300">
               House of Calculators
-            </h1>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

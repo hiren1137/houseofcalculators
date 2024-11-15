@@ -39,12 +39,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
-        <h1 className="text-5xl font-extrabold mb-4 text-white">
-          House of Calculators
-        </h1>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
