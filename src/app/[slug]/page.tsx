@@ -5,6 +5,7 @@ import { getMetadata } from '@/lib/metadata-config';
 import CategoryPage from './CategoryPage';
 import CalculatorPage from './CalculatorPage';
 import type { Metadata } from 'next/types';  
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const { slug } = params;
 

@@ -5,7 +5,12 @@ import type { Metadata, Viewport } from 'next/types'  // Change this line
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.houseofcalculators.com'),
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' }
+    ],
+    apple: [
+      { url: '/favicon.png', type: 'image/png', sizes: '180x180' }
+    ]
   },
   robots: {
     index: true,

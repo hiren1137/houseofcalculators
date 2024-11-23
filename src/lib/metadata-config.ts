@@ -1,28 +1,24 @@
-// src/lib/metadata-config.ts
-
 export interface MetadataConfig {
-    title: string;
-    description: string;
-    canonical: string;
-    keywords?: string;
-  }
-  
-  
-  const BASE_URL = 'https://www.houseofcalculators.com';
-  
-  // Homepage metadata
-  export const homeMetadata: MetadataConfig = {
-    title: "Free Online Calculators for Math, Finance & Engineering | House of Calculators",
-    description: "Access our comprehensive collection of free online calculators for mathematics, finance, health, engineering, and everyday calculations. Get precise results instantly with our user-friendly tools.",
-    canonical: BASE_URL
-  };
+  title: string;
+  description: string;
+  canonical: string;
+  keywords?: string;
+}
+
+const BASE_URL = 'https://www.houseofcalculators.com';
+
+export const homeMetadata: MetadataConfig = {
+  title: "Free Online Calculators for Math, Finance & Engineering | House of Calculators",
+  description: "Access our comprehensive collection of free online calculators...",
+  canonical: BASE_URL
+};
   
   // Category metadata
   export const categoryMetadata: Record<string, MetadataConfig> = {
-    'math-calculators': {
+    'mathematics-calculators': {
       title: "Mathematics Calculators | Free Math Tools & Solvers - House of Calculators",
       description: "Access our comprehensive collection of mathematics calculators. Tools for algebra, calculus, geometry, trigonometry, and more. Get instant solutions with step-by-step explanations.",
-      canonical: `${BASE_URL}/math-calculators`,
+      canonical: `${BASE_URL}/mathematics-calculators`,
     },
     'finance-calculators': {
       title: "Financial Calculators | Free Finance Tools - House of Calculators",
@@ -322,45 +318,50 @@ export const calculatorMetadata: Record<string, MetadataConfig> = {
     description: 'Use our Cartesian to Polar Calculator to easily convert Cartesian (x, y) coordinates to Polar (r, θ) coordinates. Perfect for students and professionals dealing with trigonometry and vector calculations.',
     canonical: `${BASE_URL}/cartesian-to-polar-calculator`
   }
+};
+
+export const notFoundMetadata: MetadataConfig = {
+  title: "Page Not Found | House of Calculators",
+  description: "The page you're looking for cannot be found...",
+  canonical: BASE_URL
+};
+
+export function getMetadata(type: 'home' | 'category' | 'calculator', slug?: string): MetadataConfig {
+  if (type === 'home') {
+    return homeMetadata;
+  }
+  
+  if (type === 'category' && slug) {
+    const metadata = categoryMetadata[slug];
+    if (!metadata) {
+      return notFoundMetadata;
+    }
+    return {
+      ...metadata,
+      title: metadata.title.includes('House of Calculators') 
+        ? metadata.title 
+        : `${metadata.title} | Free Online Tools`,
+      canonical: `${BASE_URL}/${slug}`
+    };
+  }
+  
+  if (type === 'calculator' && slug) {
+    const metadata = calculatorMetadata[slug];
+    if (!metadata) {
+      return notFoundMetadata;
+    }
+    return {
+      ...metadata,
+      title: metadata.title.includes('- House of Calculators') 
+        ? metadata.title.replace(' - House of Calculators', '') + ' | Free Online Calculator'
+        : metadata.title + ' | Free Online Calculator',
+      canonical: `${BASE_URL}/${slug}`
+    };
+  }
+  
+  return notFoundMetadata;
 }
 
-const notFoundMetadata: MetadataConfig = {
-    title: "Page Not Found | House of Calculators",
-    description: "The page you're looking for cannot be found. Explore our collection of free online calculators for mathematics, finance, health, and engineering calculations.",
-    canonical: BASE_URL
-  };
-  
-  export function getMetadata(type: 'home' | 'category' | 'calculator', slug?: string): MetadataConfig {
-    if (type === 'home') return homeMetadata;
-    
-    if (type === 'category' && slug) {
-      const metadata = categoryMetadata[slug];
-      if (!metadata) return notFoundMetadata;
-      return {
-        ...metadata,
-        title: `${metadata.title} | Free Online Tools`,
-        canonical: `${BASE_URL}/${slug}`
-      };
-    }
-    
-    if (type === 'calculator' && slug) {
-      const metadata = calculatorMetadata[slug];
-      if (!metadata) return notFoundMetadata;
-      return {
-        ...metadata,
-        title: metadata.title.replace(' - House of Calculators', '') + ' | Free Online Calculator',
-        canonical: `${BASE_URL}/${slug}`
-      };
-    }
-    
-    return notFoundMetadata;
-  }
-  
-  export function generateCanonicalUrl(path: string): string {
-    return `${BASE_URL}${path}`;
-  }
-  
-  // Export notFoundMetadata if needed elsewhere
-  export { notFoundMetadata };
-
-  
+export function generateCanonicalUrl(path: string): string {
+  return path.startsWith('/') ? `${BASE_URL}${path}` : `${BASE_URL}/${path}`;
+}

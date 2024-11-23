@@ -6,6 +6,8 @@ import { useSearchParams } from 'next/navigation.js';
 import Header from './components/Header';
 import { categories, calculators } from '@/lib/calculator-data';
 import CalculatorGrid from './components/CalculatorGrid';
+import SitemapLinks from './components/Calculators/SitemapLinks';
+
 
 const h1Title = "Free Online Calculators: Mathematics, Finance, Health & Engineering Tools";
 
@@ -156,6 +158,7 @@ export default function HomeContent() {
           </div>
         </section>
 
+        <SitemapLinks />
         <footer className="bg-gray-800 mt-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
