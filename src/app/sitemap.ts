@@ -7,16 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all calculator URLs from metadata-config
   const calculatorUrls = Object.keys(calculatorMetadata).map((key) => ({
     url: `${baseUrl}/${key}`,
-    lastModified: new Date(),
-    changeFreq: 'weekly' as const,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
 
   // Add category pages using categoryMetadata
   const categoryUrls = Object.keys(categoryMetadata).map((category) => ({
     url: `${baseUrl}/${category}`,
-    lastModified: new Date(),
-    changeFreq: 'weekly' as const,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'weekly' as const,
     priority: 0.9,
   }));
 
@@ -24,29 +24,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFreq: 'daily' as const,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'daily' as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFreq: 'monthly' as const,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFreq: 'weekly' as const,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'weekly' as const,
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFreq: 'monthly' as const,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly' as const,
       priority: 0.5,
     },
-  ];
+  ] as const;
 
   return [...staticPages, ...categoryUrls, ...calculatorUrls];
 }

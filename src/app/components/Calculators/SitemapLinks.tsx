@@ -1,30 +1,35 @@
 import Link from 'next/link';
-import { calculators } from '@/lib/calculator-data';
-import { categories } from '@/lib/calculator-data';
+import { calculators, categories } from '@/lib/calculator-data';
 
 export default function SitemapLinks() {
   return (
-    <div aria-hidden="true" className="hidden" style={{display: 'none'}}>
-      <nav>
-        {categories.map((category) => (
-          <Link 
-            key={category.slug} 
-            href={`/${category.slug}`}
-            tabIndex={-1}
-          >
-            {category.name} Calculators
-          </Link>
-        ))}
-        {calculators.map((calculator) => (
-          <Link 
-            key={calculator.slug} 
-            href={`/${calculator.slug}`}
-            tabIndex={-1}
-          >
-            {calculator.title}
-          </Link>
-        ))}
-      </nav>
+    <div style={{ display: 'none' }} aria-hidden="true">
+      <footer>
+        <div>
+          <h2>Categories</h2>
+          <ul>
+            {categories.map((category) => (
+              <li key={category.slug}>
+                <Link href={`/${category.slug}`}>
+                  {category.name} Calculators
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2>Calculators</h2>
+          <ul>
+            {calculators.map((calculator) => (
+              <li key={calculator.slug}>
+                <Link href={`/${calculator.slug}`}>
+                  {calculator.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 }
