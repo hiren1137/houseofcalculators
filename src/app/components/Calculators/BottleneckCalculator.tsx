@@ -95,7 +95,7 @@ export default function BottleneckCalculator() {
 
   return (
     <div className="p-8 max-w-4xl mx-auto bg-gray-900 rounded-xl shadow-lg space-y-8">
-      <h1 className="text-5xl font-extrabold text-center text-white mb-8">PC Component Bottleneck Calculator</h1>
+      <h1 className="text-5xl font-extrabold text-center text-white mb-8">Bottleneck Calculator</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>

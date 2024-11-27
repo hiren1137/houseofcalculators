@@ -82,23 +82,11 @@ const CalculatorPage: FC<CalculatorPageProps> = ({ slug }) => {
             href={`/${category.slug}`}
             className="hover:text-white transition-colors"
           >
-            {category.name} Calculators
+            {category.name}
           </Link>
-          <span className="mx-2">/</span>
-          <span className="text-white">{calculator.title}</span>
         </nav>
 
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl">{calculator.icon}</span>
-            <h1 className="text-3xl font-bold text-white">
-              {calculator.title}
-            </h1>
-          </div>
-          <p className="text-gray-400">{calculator.description}</p>
-        </div>
-
-        <Suspense 
+        <Suspense
           fallback={
             <div className="flex items-center justify-center h-32 bg-gray-800 rounded-lg">
               <div className="text-center text-white">

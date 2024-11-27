@@ -77,7 +77,7 @@ export default function SnowDayCalculator() {
     <div className="max-w-4xl mx-auto mt-10 p-8 bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl shadow-2xl text-white">
       <h1 className="text-4xl font-bold mb-6 text-center flex items-center justify-center">
         <span className="mr-4">❄️</span>
-        Snow Day Calculator: School Closing Predictor
+        Snow Day Calculator: Will I have a snow day tomorrow?
         <span className="ml-4">❄️</span>
       </h1>
       
