@@ -3,47 +3,45 @@ import { calculatorMetadata, categoryMetadata } from '../lib/metadata-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.houseofcalculators.com';
+  const currentDate = new Date().toISOString();
 
-  // Get all calculator URLs from metadata-config
   const calculatorUrls = Object.keys(calculatorMetadata).map((key) => ({
     url: `${baseUrl}/${key}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'weekly' as const,
+    lastModified: currentDate,
+    changeFreq: 'weekly',
     priority: 0.8,
   }));
 
-  // Add category pages using categoryMetadata
   const categoryUrls = Object.keys(categoryMetadata).map((category) => ({
     url: `${baseUrl}/${category}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'weekly' as const,
+    lastModified: currentDate,
+    changeFreq: 'weekly',
     priority: 0.9,
   }));
 
-  // Static pages
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'daily' as const,
+      lastModified: currentDate,
+      changeFreq: 'daily',
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly' as const,
+      lastModified: currentDate,
+      changeFreq: 'monthly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly' as const,
+      lastModified: currentDate,
+      changeFreq: 'weekly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'monthly' as const,
+      lastModified: currentDate,
+      changeFreq: 'monthly',
       priority: 0.5,
     },
   ] as const;

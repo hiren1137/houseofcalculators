@@ -9,313 +9,299 @@ const BASE_URL = 'https://www.houseofcalculators.com';
 
 export const homeMetadata: MetadataConfig = {
   title: "Free Online Calculators for Math, Finance & Engineering | House of Calculators",
-  description: "Access our comprehensive collection of free online calculators...",
+  description: "Explore free online calculators for math, finance, and engineering at House of Calculators. Simplify your calculations with our easy-to-use tools!",
   canonical: BASE_URL
 };
   
-  // Category metadata
-  export const categoryMetadata: Record<string, MetadataConfig> = {
-    'mathematics-calculators': {
-      title: "Mathematics Calculators | Free Math Tools & Solvers - House of Calculators",
-      description: "Access our comprehensive collection of mathematics calculators. Tools for algebra, calculus, geometry, trigonometry, and more. Get instant solutions with step-by-step explanations.",
-      canonical: `${BASE_URL}/mathematics-calculators`,
-    },
-    'finance-calculators': {
-      title: "Financial Calculators | Free Finance Tools - House of Calculators",
-      description: "Free financial calculators for loans, investments, mortgages, and budgeting. Make informed financial decisions with our comprehensive suite of finance tools.",
-      canonical: `${BASE_URL}/finance-calculators`,
-    },
-    'health-calculators': {
-      title: "Health & Fitness Calculators | Free Health Tools - House of Calculators",
-      description: "Calculate BMI, body fat, nutrition, and other health metrics with our free health calculators. Evidence-based tools for managing your health and fitness goals.",
-      canonical: `${BASE_URL}/health-calculators`,
-    },
-    'engineering-calculators': {
-      title: "Engineering Calculators | Free Technical Tools - House of Calculators",
-      description: "Professional engineering calculators for mechanical, electrical, civil, and computer engineering. Free tools for technical calculations and analysis.",
-      canonical: `${BASE_URL}/engineering-calculators`,
-    },
-    'everyday-calculators': {
-      title: "Everyday Use Calculators | Practical Tools - House of Calculators",
-      description: "Free calculators for everyday calculations. Unit conversions, measurement tools, and practical calculators for daily use. Simple, accurate, and easy to use.",
-      canonical: `${BASE_URL}/everyday-calculators`,
-    },
-    'gaming-calculators': {
-      title: "Gaming Calculators | Game Stats & Tools - House of Calculators",
-      description: "Free gaming calculators and tools for various games. Calculate stats, optimize builds, and enhance your gaming experience with our specialized calculators.",
-      canonical: `${BASE_URL}/gaming-calculators`,
-    },
-    'science-calculators': {
-      title: "Science Calculators | Free Scientific Tools - House of Calculators",
-      description: "Free scientific calculators for physics, chemistry, and biology. Calculate formulas, convert units, and solve complex scientific problems with our tools.",
-      canonical: `${BASE_URL}/science-calculators`,
-    },
-    'lifestyle-spirituality-calculators': {
-      title: "Lifestyle & Spirituality Calculators | Free Tools - House of Calculators",
-      description: "Access our free lifestyle and spirituality calculators. Tools for personal growth, spiritual insights, and lifestyle planning to enhance your daily life.",
-      canonical: `${BASE_URL}/lifestyle-spirituality-calculators`,
-    }
-  };
+// Category metadata
+export const categoryMetadata: Record<string, MetadataConfig> = {
+  'math-calculators': {
+    title: "Mathematics Calculators | Free Math Tools & Solvers - House of Calculators",
+    description: "Explore free math calculators for algebra, calculus, geometry, and more. Solve problems with instant results and step-by-step explanations.",
+    canonical: `${BASE_URL}/math-calculators`,
+  },
+  'finance-calculators': {
+    title: "Financial Calculators | Free Finance Tools - House of Calculators",
+    description: "Access free calculators for loans, mortgages, and investments. Make smart financial decisions with simple, accurate, and efficient tools.",
+    canonical: `${BASE_URL}/finance-calculators`,
+  },
+  'health-calculators': {
+    title: "Health & Fitness Calculators | Free Health Tools - House of Calculators",
+    description: "Discover health calculators for BMI, body fat, and nutrition. Manage your health and fitness goals with reliable and user-friendly tools.",
+    canonical: `${BASE_URL}/health-calculators`,
+  },
+  'engineering-calculators': {
+    title: "Engineering Calculators | Free Technical Tools - House of Calculators",
+    description: "Explore free calculators for civil, mechanical, and electrical engineering. Perform technical calculations with ease and precision.",
+    canonical: `${BASE_URL}/engineering-calculators`,
+  },
+  'everyday-calculators': {
+    title: "Everyday Use Calculators | Practical Tools - House of Calculators",
+    description: "Find free calculators for daily tasks, unit conversions, and measurements. Simple, practical tools for everyday calculations.",
+    canonical: `${BASE_URL}/everyday-calculators`,
+  },
+  'gaming-calculators': {
+    title: "Gaming Calculators | Game Stats & Tools - House of Calculators",
+    description: "Access gaming calculators to optimize stats, builds, and strategies. Enhance your gameplay with free, accurate tools for gamers.",
+    canonical: `${BASE_URL}/gaming-calculators`,
+  },
+  'science-calculators': {
+    title: "Science Calculators | Free Scientific Tools - House of Calculators",
+    description: "Use scientific calculators for physics, chemistry, and biology. Solve complex problems with user-friendly tools and detailed results.",
+    canonical: `${BASE_URL}/science-calculators`,
+  },
+  'lifestyle-spirituality-calculators': {
+    title: "Lifestyle & Spirituality Calculators | Free Tools - House of Calculators",
+    description: "Access calculators for personal growth and spirituality. Plan your lifestyle and explore insights with accurate, easy-to-use tools.",
+    canonical: `${BASE_URL}/lifestyle-spirituality-calculators`,
+  }
+};
+
 // Calculator metadata
 export const calculatorMetadata: Record<string, MetadataConfig> = {
-    'snow-day-calculator': {
-      title: 'Snow Day Calculator - Predict School Closures - House of Calculators',
-      description: 'Use our free Snow Day Calculator to estimate the likelihood of school closures due to winter weather. Input local weather data and get accurate predictions for snow days.',
-      canonical: `${BASE_URL}/snow-day-calculator`
-    },
-    'bottleneck-calculator': {
-      title: 'CPU & GPU Bottleneck Calculator - Optimize PC Performance - House of Calculators',
-      description: 'Identify and resolve PC performance issues with our Bottleneck Calculator. Analyze your CPU and GPU combination to maximize gaming and work efficiency. Free and easy to use.',
-      canonical: `${BASE_URL}/bottleneck-calculator`
-    },
-    'rref-calculator': {
-      title: 'RREF Calculator - Reduced Row Echelon Form - House of Calculators',
-      description: 'Simplify matrix calculations with our free RREF (Reduced Row Echelon Form) Calculator. Solve linear equations, find inverse matrices, and more. Step-by-step solutions included.',
-      canonical: `${BASE_URL}/rref-calculator`
-    },
-    'cross-product-calculator': {
-      title: '3D Cross Product Calculator - Vector Mathematics - House of Calculators',
-      description: 'Calculate cross products of 3D vectors easily with our free Cross Product Calculator. Ideal for physics, engineering, and mathematics. Includes visual representation and step-by-step explanation.',
-      canonical: `${BASE_URL}/cross-product-calculator`
-    },
-    'acft-calculator': {
-      title: 'ACFT Score Calculator - Army Combat Fitness Test - House of Calculators',
-      description: 'Accurately calculate your Army Combat Fitness Test (ACFT) score with our free ACFT Calculator. Input your performance for each event and get instant results. Updated for current Army standards.',
-      canonical: `${BASE_URL}/acft-calculator`
-    },
-    'ti-84-calculator': {
-      title: 'Free Online TI-84 Calculator - Graphing & Scientific - House of Calculators',
-      description: 'Access a free online version of the TI-84 calculator. Perform complex calculations, graph functions, and solve equations with this powerful tool. No download required.',
-      canonical: `${BASE_URL}/ti-84-calculator`
-    },
-    'a1c-calculator': {
-      title: 'A1C Calculator - Estimate Average Blood Glucose - House of Calculators',
-      description: 'Convert between A1C and estimated average glucose (eAG) with our free A1C Calculator. Understand your blood sugar levels better and track your diabetes management progress.',
-      canonical: `${BASE_URL}/a1c-calculator`
-    },
-    'midpoint-calculator': {
-      title: 'Midpoint Calculator - Find Center Points - House of Calculators',
-      description: 'Easily calculate the midpoint between two points with our free Midpoint Calculator. Perfect for geometry, coordinate systems, and map reading. Includes 2D and 3D calculations.',
-      canonical: `${BASE_URL}/midpoint-calculator`
-    },
-    'taylor-series-calculator': {
-      title: 'Taylor Series Calculator - Function Approximation - House of Calculators',
-      description: 'Compute Taylor series expansions for various functions with our free calculator. Adjust the center point and number of terms. Ideal for calculus and mathematical analysis.',
-      canonical: `${BASE_URL}/taylor-series-calculator`
-    },
-    'vorici-chromatic-calculator': {
-      title: 'Vorici Calculator - Optimize Your PoE Chromatic Orb Usage',
-      description: 'Use our Vorici Calculator to maximize efficiency in Path of Exile. Compare chromatic orb costs, success rates, and Vorici crafting methods. Optimize your socket coloring strategy with this essential PoE tool.',
-      canonical: `${BASE_URL}/vorici-chromatic-calculator`
-    },
-    'board-foot-calculator': {
-      title: 'Board Foot Calculator - House of Calculators',
-      description: 'Calculate lumber volume and cost with our free Board Foot Calculator. Easily determine board feet for any wood project or purchase.',
-      canonical: `${BASE_URL}/board-foot-calculator`
-    },
-    'army-body-fat-calculator': {
-      title: 'Army Body Fat Calculator - Official U.S. Military Standards - House of Calculators',
-      description: 'Use our accurate Army Body Fat Calculator to measure your body composition against official U.S. military standards. Get instant results, personalized tips, and prepare for ACFT. Ideal for soldiers and recruits.',
-      canonical: `${BASE_URL}/army-body-fat-calculator`
-    },
-    'dot-product-calculator': {
-      title: 'Dot Product Calculator - Vector Mathematics - House of Calculators',
-      description: 'Calculate dot products of vectors easily with our free Dot Product Calculator. Ideal for physics, engineering, and mathematics. Includes visual representation and step-by-step explanation.',
-      canonical: `${BASE_URL}/dot-product-calculator`
-    },
-    'mean-absolute-deviation-calculator': {
-      title: 'Mean Absolute Deviation Calculator - Measure Data Dispersion - House of Calculators',
-      description: 'Calculate and visualize Mean Absolute Deviation (MAD) with our free online tool. Perfect for statistics, data analysis, and understanding data spread. Includes graphical representation.',
-      keywords: 'mean absolute deviation, MAD calculator, data dispersion, statistics calculator, data analysis tool',
-      canonical: `${BASE_URL}/mean-absolute-deviation-calculator`
-    },
-    'bra-size-calculator': {
-      title: 'Bra Size Calculator - Find Your Perfect Fit - House of Calculators',
-      description: 'Use our accurate Bra Size Calculator for US, UK, Australian, and Indian sizes. Get your perfect fit with easy measurements and expert tips. Free, instant results!',
-      keywords: 'bra size calculator, bra fitting, US bra sizes, UK bra sizes, Australian bra sizes, Indian bra sizes, perfect fit',
-      canonical: `${BASE_URL}/bra-size-calculator`
-    },
-'simpsons-rule-calculator': {
+  'snow-day-calculator': {
+    title: 'Snow Day Calculator - Predict School Closures - House of Calculators',
+    description: 'Find your Snow Day chances with our calculator. Enter your US zip code for accurate school closure predictions due to winter weather.',
+    canonical: `${BASE_URL}/snow-day-calculator`
+  },
+  'bottleneck-calculator': {
+    title: 'Bottleneck Calculator - Optimize PC Performance - House of Calculators',
+    description: 'Analyze your CPU and GPU combination with our Bottleneck Calculator. Optimize gaming and work performance efficiently.',
+    canonical: `${BASE_URL}/bottleneck-calculator`
+  },
+  'rref-calculator': {
+    title: 'RREF Calculator - Reduced Row Echelon Form - House of Calculators',
+    description: 'Solve matrices, find inverses, and reduce row echelon forms instantly. Use our free RREF Calculator with step-by-step solutions.',
+    canonical: `${BASE_URL}/rref-calculator`
+  },
+  'cross-product-calculator': {
+    title: '3D Cross Product Calculator - Vector Mathematics - House of Calculators',
+    description: 'Calculate cross products of 3D vectors instantly. Ideal for engineering and physics, with step-by-step explanations and visualizations.',
+    canonical: `${BASE_URL}/cross-product-calculator`
+  },
+  'acft-calculator': {
+    title: 'ACFT Score Calculator - Army Combat Fitness Test - House of Calculators',
+    description: 'Calculate your Army Combat Fitness Test score accurately. Input your results for instant, updated scores per Army standards.',
+    canonical: `${BASE_URL}/acft-calculator`
+  },
+  'ti-84-calculator': {
+    title: 'Free Online TI-84 Calculator - Graphing & Scientific - House of Calculators',
+    description: 'Access a free TI-84 calculator online for graphing, equations, and scientific calculations. No download required.',
+    canonical: `${BASE_URL}/ti-84-calculator`
+  },
+  'a1c-calculator': {
+    title: 'A1C Calculator - Estimate Average Blood Glucose - House of Calculators',
+    description: 'Convert between A1C and estimated glucose levels. Use our A1C Calculator to manage your health effectively.',
+    canonical: `${BASE_URL}/a1c-calculator`
+  },
+  'midpoint-calculator': {
+    title: 'Midpoint Calculator - Find Center Points - House of Calculators',
+    description: 'Calculate the midpoint of two points in 2D or 3D spaces instantly. Ideal for geometry and map analysis.',
+    canonical: `${BASE_URL}/midpoint-calculator`
+  },
+  'taylor-series-calculator': {
+    title: 'Taylor Series Calculator - Function Approximation - House of Calculators',
+    description: 'Compute Taylor series expansions easily. Adjust terms and center points for accurate function approximations.',
+    canonical: `${BASE_URL}/taylor-series-calculator`
+  },
+  'vorici-chromatic-calculator': {
+    title: 'Vorici Calculator - Optimize Your PoE Chromatic Orb Usage',
+    description: 'Optimize your Path of Exile chromatic orb usage. Use our Vorici Calculator for cost and success rate analysis.',
+    canonical: `${BASE_URL}/vorici-chromatic-calculator`
+  },
+  'board-foot-calculator': {
+    title: 'Board Foot Calculator - House of Calculators',
+    description: 'Calculate board feet for lumber projects quickly. Use our free Board Foot Calculator for accurate volume measurements.',
+    canonical: `${BASE_URL}/board-foot-calculator`
+  },
+  'army-body-fat-calculator': {
+    title: 'Army Body Fat Calculator - Official U.S. Military Standards - House of Calculators',
+    description: 'Accurately measure body fat percentage based on U.S. Army standards. Input your measurements for instant, reliable results.',
+    canonical: `${BASE_URL}/army-body-fat-calculator`
+  },
+  'dot-product-calculator': {
+    title: 'Dot Product Calculator - Vector Mathematics - House of Calculators',
+    description: 'Calculate dot products of vectors easily. Ideal for physics, engineering, and math, with clear explanations and results.',
+    canonical: `${BASE_URL}/dot-product-calculator`
+  },
+  'mean-absolute-deviation-calculator': {
+    title: 'Mean Absolute Deviation Calculator - Measure Data Dispersion - House of Calculators',
+    description: 'Calculate Mean Absolute Deviation (MAD) instantly. Analyze data dispersion and visualize statistics effectively.',
+    canonical: `${BASE_URL}/mean-absolute-deviation-calculator`
+  },
+  'bra-size-calculator': {
+    title: 'Bra Size Calculator - Find Your Perfect Fit - House of Calculators',
+    description: 'Find your ideal bra size for US, UK, and more. Use our Bra Size Calculator with accurate measurements and quick results.',
+    canonical: `${BASE_URL}/bra-size-calculator`
+  },
+  'simpsons-rule-calculator': {
     title: 'Simpsons Rule Calculator - House of Calculators',
-    description: "Use our Simpson's Rule Calculator to approximate definite integrals with ease. Accurate numerical integration for your mathematical needs.",
-    keywords: "Simpson's Rule Calculator, simpson rule calculator, simpson's approximation calculator, simpsons rule calc",
+    description: "Approximate definite integrals using Simpson's Rule. Simplify numerical integration with our free, reliable calculator.",
     canonical: `${BASE_URL}/simpsons-rule-calculator`
   },
   'quadratic-equation-solver': {
     title: 'Quadratic Equation Solver - House of Calculators',
-    description: 'Solve quadratic equations easily with our Quadratic Equation Solver. Find roots and visualize graphs quickly.',
+    description: 'Solve quadratic equations instantly. Find roots and visualize graphs with our free and easy-to-use solver.',
     canonical: `${BASE_URL}/quadratic-equation-solver`
   },
   'cpm-calculator': {
-    title: 'CPM Calculator - Cost Per Mile Calculation - House of Calculators',
-    description: 'Easily calculate your Cost Per Mille (CPM) with our professional CPM Calculator. Optimize your advertising spend and maximize campaign efficiency today.',
+    title: 'CPM Calculator - Cost Per Mille Calculation - House of Calculators',
+    description: 'Easily calculate CPM for ads. Optimize your campaign spending and measure efficiency with accurate results.',
     canonical: `${BASE_URL}/cpm-calculator`
   },
   'point-buy-calculator': {
     title: 'Point Buy Calculator - House of Calculators',
-    description: "Customize your character's attributes with our Point Buy Calculator. Allocate points strategically to create the perfect character for your adventure.",
+    description: 'Customize character attributes with our Point Buy Calculator. Perfect for creating balanced stats for RPG adventures.',
     canonical: `${BASE_URL}/point-buy-calculator`
   },
   'motorcycle-loan-calculator': {
-    title: 'Motorcycle Loan Calculator - Estimate Your Monthly Payments - House of Calculators',
-    description: 'Use our free Motorcycle Loan Calculator to estimate your monthly payments and total interest. Plan your purchase and understand your financing options today.',
+    title: 'Motorcycle Loan Calculator - Estimate Monthly Payments - House of Calculators',
+    description: 'Estimate monthly payments and interest for your motorcycle loan. Plan financing options with our free calculator.',
     canonical: `${BASE_URL}/motorcycle-loan-calculator`
   },
   'bmi-calculator': {
     title: 'BMI Calculator - Calculate Your Body Mass Index - House of Calculators',
-    description: 'Calculate your Body Mass Index (BMI) with our free BMI Calculator. Understand your weight category and take steps towards a healthier lifestyle today.',
+    description: 'Calculate your BMI to understand your health. Enter weight and height for instant results and personalized insights.',
     canonical: `${BASE_URL}/bmi-calculator`
   },
   'angel-number-calculator': {
-    title: 'Angel Number Calculator - Discover Your Spiritual Message - House of Calculators',
-    description: 'Unveil your angel number with our free Angel Number Calculator. Enter your birth date or any significant number to find its spiritual meaning and guidance.',
+    title: 'Angel Number Calculator - Discover Spiritual Messages - House of Calculators',
+    description: 'Find your angel number with our calculator. Input your birth date or significant numbers for spiritual insights.',
     canonical: `${BASE_URL}/angel-number-calculator`
   },
   'tangent-line-calculator': {
-    title: 'Tangent Line Calculator - Find the Equation of a Tangent Line - House of Calculators',
-    description: 'Calculate the equation of a tangent line to a function at a given point with our free Tangent Line Calculator. Visualize the function and its tangent line on a graph.',
+    title: 'Tangent Line Calculator - Find Tangent Line Equations - House of Calculators',
+    description: 'Calculate tangent lines to curves at specific points. Visualize functions and their tangents with step-by-step details.',
     canonical: `${BASE_URL}/tangent-line-calculator`
   },
   'maryland-paycheck-calculator': {
-    title: 'Maryland Paycheck Calculator - Estimate Your Net Pay - House of Calculators',
-    description: 'Use our Maryland Paycheck Calculator to estimate your net paycheck after federal and state taxes, Social Security, and Medicare deductions. Plan your finances effectively.',
+    title: 'Maryland Paycheck Calculator - Estimate Net Pay - House of Calculators',
+    description: 'Calculate your net pay after taxes for Maryland. Get accurate results for financial planning and payroll estimates.',
     canonical: `${BASE_URL}/maryland-paycheck-calculator`
   },
   'interpolation-calculator': {
-    title: 'Interpolation Calculator - Estimate a Value Using Linear Interpolation - House of Calculators',
-    description: 'Estimate a value using linear interpolation with our free Interpolation Calculator. Input known points and calculate the interpolated value instantly.',
+    title: 'Interpolation Calculator - Estimate Values - House of Calculators',
+    description: 'Estimate values using linear interpolation. Input known points to calculate unknowns instantly and accurately.',
     canonical: `${BASE_URL}/interpolation-calculator`
   },
   'riemann-sum-calculator': {
-    title: 'Riemann Sum Calculator - Approximate Integrals Using Riemann Sums - House of Calculators',
-    description: 'Approximate the area under a curve using Riemann sums with our free Riemann Sum Calculator. Choose from Left, Right, Midpoint, or Trapezoidal methods.',
+    title: 'Riemann Sum Calculator - Approximate Integrals - House of Calculators',
+    description: 'Approximate integrals using Riemann sums. Choose left, right, midpoint, or trapezoidal methods with detailed visuals.',
     canonical: `${BASE_URL}/riemann-sum-calculator`
   },
   'partial-fraction-decomposition-calculator': {
-    title: 'Partial Fraction Decomposition Calculator - Decompose Rational Functions - House of Calculators',
-    description: 'Perform partial fraction decomposition on rational functions with our free Partial Fraction Decomposition Calculator. Input your function and get the decomposed form instantly.',
+    title: 'Partial Fraction Decomposition Calculator - House of Calculators',
+    description: 'Decompose rational functions into partial fractions. Use our calculator for quick, step-by-step solutions.',
     canonical: `${BASE_URL}/partial-fraction-decomposition-calculator`
   },
   'waspi-compensation-calculator': {
-    title: 'WASPI Compensation Calculator - Estimate Your Pension Compensation - House of Calculators',
-    description: 'Use our free WASPI Compensation Calculator to estimate potential compensation for women affected by state pension age changes. Input your birth date and get an instant estimate.',
-    keywords: 'WASPI, Women Against State Pension Inequality, pension compensation, UK state pension, retirement calculator',
+    title: 'WASPI Compensation Calculator - Estimate Pension Compensation - House of Calculators',
+    description: 'Estimate pension compensation for WASPI-affected individuals. Input your details for accurate calculations.',
     canonical: `${BASE_URL}/waspi-compensation-calculator`
   },
   'roblox-tax-calculator': {
     title: 'Roblox Tax Calculator - House of Calculators',
-    description: 'Calculate Roblox marketplace fees and estimate your earnings with our Roblox Tax Calculator. Perfect for Roblox developers and users.',
+    description: 'Calculate your Roblox earnings after marketplace fees. Ideal for developers and users managing in-game earnings.',
     canonical: `${BASE_URL}/roblox-tax-calculator`
   },
   'null-space-calculator': {
     title: 'Null Space Calculator - House of Calculators',
-    description: 'Efficiently calculate the null space (kernel) of matrices with our accurate null space calculator. Solve linear algebra problems with ease.',
+    description: 'Calculate the null space of matrices instantly. Solve linear algebra problems with ease using our free calculator.',
     canonical: `${BASE_URL}/null-space-calculator`
   },
   'iowa-paycheck-calculator': {
     title: 'Iowa Paycheck Calculator - House of Calculators',
-    description: 'Calculate your net pay after federal and Iowa state taxes, Social Security, and Medicare deductions using our Iowa Paycheck Calculator. Perfect for Iowa residents.',
-    keywords: 'Iowa paycheck calculator, net pay estimator, Iowa taxes, federal taxes, Social Security, Medicare, finance calculator',
+    description: 'Calculate your net pay for Iowa. Includes federal taxes, Social Security, and Medicare deductions for accurate results.',
     canonical: `${BASE_URL}/iowa-paycheck-calculator`
   },
   'jacobian-calculator': {
     title: 'Jacobian Calculator - House of Calculators',
-    description: 'Compute the Jacobian matrix of a set of functions using our accurate Jacobian Calculator. Perfect for students and professionals.',
-    keywords: 'Jacobian calculator, Jacobian matrix, partial derivatives, multivariable calculus, mathematics calculator',
+    description: 'Calculate Jacobian matrices for multivariable functions. Simplify calculus problems with this free, powerful tool.',
     canonical: `${BASE_URL}/jacobian-calculator`
   },
   'electron-configuration-calculator': {
     title: 'Electron Configuration Calculator - House of Calculators',
-    description: 'Determine the electron configuration of elements using our easy-to-use Electron Configuration Calculator. Ideal for students and chemistry enthusiasts.',
-    keywords: 'electron configuration calculator, chemistry calculator, electron shells, periodic table, element electron configuration',
+    description: 'Determine the electron configuration of elements. Perfect for students and professionals in chemistry.',
     canonical: `${BASE_URL}/electron-configuration-calculator`
   },
   'convolution-calculator': {
     title: 'Convolution Calculator - House of Calculators',
-    description: 'Compute the convolution of two sequences using our easy-to-use Convolution Calculator. Ideal for students and engineers.',
-    keywords: 'convolution calculator, math calculator, signal processing, discrete convolution, sequences convolution',
+    description: 'Compute convolution of sequences easily. Ideal for signal processing and mathematics.',
     canonical: `${BASE_URL}/convolution-calculator`
   },
   'jump-calculator-5e': {
     title: 'Jump Calculator 5e - House of Calculators',
-    description: 'Determine your jump distance using the Dungeons & Dragons 5th Edition Jump Calculator. Perfect for players and dungeon masters.',
-    keywords: 'jump calculator 5e, D&D jump calculator, role-playing game tools, Dungeons and Dragons, gaming calculator',
+    description: 'Calculate jump distances for D&D 5th Edition characters. Perfect for players and dungeon masters planning adventures.',
     canonical: `${BASE_URL}/jump-calculator-5e`
   },
   'arkansas-child-support-calculator': {
     title: 'Arkansas Child Support Calculator - House of Calculators',
-    description: 'Calculate your child support obligations accurately using our Arkansas Child Support Calculator. Ideal for parents and legal professionals.',
-    keywords: 'Arkansas child support calculator, child support obligations, legal calculator, family law, Arkansas legal tools',
+    description: 'Calculate child support obligations for Arkansas accurately. Ideal for parents and legal professionals.',
     canonical: `${BASE_URL}/arkansas-child-support-calculator`
   },
   'cd-ladder-calculator': {
     title: 'CD Ladder Calculator - House of Calculators',
-    description: 'Optimize your investment strategy with our CD Ladder Calculator. Plan your Certificate of Deposit ladder to maximize returns while maintaining liquidity.',
-    keywords: 'CD ladder calculator, certificate of deposit ladder, investment calculator, finance tools, CD investment strategy',
+    description: 'Plan your CD investments with our CD Ladder Calculator. Optimize returns while maintaining liquidity.',
     canonical: `${BASE_URL}/cd-ladder-calculator`
   },
   'linear-independence-calculator': {
     title: 'Linear Independence Calculator - House of Calculators',
-    description: 'Determine if your set of vectors is linearly independent or dependent with our easy-to-use calculator. Enhance your understanding of linear algebra concepts.',
-    keywords: 'linear independence calculator, vector independence, linear algebra tools, math calculators, linear dependence',
+    description: 'Determine if vectors are linearly independent. Simplify linear algebra problems with clear and instant results.',
     canonical: `${BASE_URL}/linear-independence-calculator`
   },
   'square-root-curve-calculator': {
     title: 'Square Root Curve Calculator - House of Calculators',
-    description: 'Calculate adjusted values using the square root curve with our intuitive calculator. Visualize the impact with interactive graphs.',
-    keywords: 'square root curve calculator, value adjustment tool, mathematical calculator, square root curve graph, data transformation',
+    description: 'Calculate and visualize square root curves easily. Ideal for mathematical transformations and analysis.',
     canonical: `${BASE_URL}/square-root-curve-calculator`
   },
   'circumference-to-diameter-calculator': {
     title: 'Circumference to Diameter Calculator - House of Calculators',
-    description: 'Easily convert the circumference of a circle to its diameter with our intuitive calculator. Understand the relationship between circumference and diameter.',
-    keywords: 'circumference to diameter calculator, circle calculations, circ to diameter, geometry calculator, circle circumference diameter',
+    description: 'Convert circumference to diameter easily. Simplify circle calculations for geometry and math.',
     canonical: `${BASE_URL}/circumference-to-diameter-calculator`
   },
   'double-angle-formula-calculator': {
     title: 'Double Angle Formula Calculator - House of Calculators',
-    description: 'Compute double angle trigonometric values using our intuitive calculator. Learn about double angle formulas with detailed explanations.',
-    keywords: 'double angle formula calculator, trigonometry calculator, sin 2A, cos 2A, tan 2A, trigonometric identities, math tools',
+    description: 'Calculate trigonometric values using double angle formulas. Simplify sin, cos, and tan calculations with ease.',
     canonical: `${BASE_URL}/double-angle-formula-calculator`
   },
   'round-to-nearest-cent-calculator': {
     title: 'Round to the Nearest Cent Calculator - House of Calculators',
-    description: 'Quickly round any monetary amount to the nearest cent with our precise calculator. Essential for financial accuracy in transactions and accounting.',
+    description: 'Quickly round monetary amounts to the nearest cent. Essential for financial accuracy and accounting.',
     canonical: `${BASE_URL}/round-to-nearest-cent-calculator`
   },
   'productivity-calculator': {
     title: 'Productivity Calculator - House of Calculators',
-    description: 'Optimize your work schedule and calculate your perfect end time with our productivity calculator. Enhance efficiency and manage time effectively.',
+    description: 'Optimize your work schedule and manage your time effectively with our Productivity Calculator. Enhance efficiency effortlessly.',
     canonical: `${BASE_URL}/productivity-calculator`
   },
   'circumcenter-calculator': {
     title: 'Circumcenter Calculator - House of Calculators',
-    description: 'Use Circumcenter Calculator to determine the circumcenter and circumradius of any triangle by inputting the coordinates of its vertices. Perfect for geometry students and enthusiasts.',
+    description: 'Determine the circumcenter and circumradius of a triangle. Input vertex coordinates for instant geometric calculations.',
     canonical: `${BASE_URL}/circumcenter-calculator`
   },
   'mm-to-inches-converter-calculator': {
     title: 'mm to Inches Converter Calculator - House of Calculators',
-    description: 'Use our mm to Inches Converter Calculator to easily convert millimeters to inches. Perfect for engineers, students, and professionals needing precise length conversions.',
+    description: 'Easily convert millimeters to inches with our accurate converter. Perfect for engineers, students, and professionals.',
     canonical: `${BASE_URL}/mm-to-inches-converter-calculator`
   },
   'coulombs-law-calculator': {
-    title: "Coulomb's Law Calculator - Electric Force Between Charges - House of Calculators",
-    description: "Use our Coulomb's Law Calculator to easily compute the electric force between two charges. Perfect for physics students, engineers, and scientists working with electrostatics.",
+    title: "Coulomb's Law Calculator - Electric Force - House of Calculators",
+    description: 'Calculate electric force between charges with Coulomb’s Law Calculator. Ideal for physics and electrostatics analysis.',
     canonical: `${BASE_URL}/coulombs-law-calculator`
   },
   'contact-lens-vertex-calculator': {
-    title: 'Contact Lens Vertex Calculator - Adjust Eyeglass Prescription - House of Calculators',
-    description: 'Use our Contact Lens Vertex Calculator to accurately adjust your eyeglass prescription for contact lenses. Simplify your vision correction process today.',
+    title: 'Contact Lens Vertex Calculator - House of Calculators',
+    description: 'Adjust your eyeglass prescription for contact lenses easily. Use our free Contact Lens Vertex Calculator for accurate results.',
     canonical: `${BASE_URL}/contact-lens-vertex-calculator`
   },
   'chebyshevs-theorem-calculator': {
-    title: "Chebyshev's Theorem Calculator - Statistical Probability - House of Calculators",
-    description: "Use our Chebyshev's Theorem Calculator to determine the minimum probability that a value lies within a specified number of standard deviations from the mean. Ideal for statistics students and professionals.",
+    title: "Chebyshev's Theorem Calculator - House of Calculators",
+    description: "Calculate probabilities using Chebyshev's Theorem. Analyze data within standard deviations with our statistical calculator.",
     canonical: `${BASE_URL}/chebyshevs-theorem-calculator`
   },
   'cartesian-to-polar-calculator': {
-    title: 'Cartesian to Polar Calculator - Coordinate Converter - House of Calculators',
-    description: 'Use our Cartesian to Polar Calculator to easily convert Cartesian (x, y) coordinates to Polar (r, θ) coordinates. Perfect for students and professionals dealing with trigonometry and vector calculations.',
+    title: 'Cartesian to Polar Calculator - House of Calculators',
+    description: 'Convert Cartesian (x, y) coordinates to Polar (r, θ) instantly. Ideal for trigonometry and vector calculations.',
     canonical: `${BASE_URL}/cartesian-to-polar-calculator`
   }
 };
@@ -353,8 +339,8 @@ export function getMetadata(type: 'home' | 'category' | 'calculator', slug?: str
     return {
       ...metadata,
       title: metadata.title.includes('- House of Calculators') 
-        ? metadata.title.replace(' - House of Calculators', '') + ' | Free Online Calculator'
-        : metadata.title + ' | Free Online Calculator',
+        ? metadata.title
+        : metadata.title,
       canonical: `${BASE_URL}/${slug}`
     };
   }
