@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation.js';  
-import { isCategory, isCalculator } from '@/lib/calculator-data';
-import { getMetadata } from '@/lib/metadata-config';
+import { isCategory, isCalculator, categories } from '@/lib/calculator-data';
+import { getMetadata, categoryMetadata, calculatorMetadata } from '@/lib/metadata-config';
 import CategoryPage from './CategoryPage';
 import CalculatorPage from './CalculatorPage';
 import type { Metadata } from 'next/types';  
@@ -42,6 +42,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return notFound();
+}
+
+export async function generateStaticParams() {
+  const categoryPages = categories.map((category) => ({
+    slug: category.slug,
+  }));
+
+  const calculatorPages = Object.keys(calculatorMetadata).map((slug) => ({
+    slug: slug,
+  }));
+
+  return [...categoryPages, ...calculatorPages];
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
